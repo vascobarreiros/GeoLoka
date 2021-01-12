@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            if signInWithAppleMager.isUserAuthenticated ==
+                .undefined {
+                  LaunchScreenView()
+               // LoginView()
+            } else if signInWithAppleMager.isUserAuthenticated == .signedOut {
+                   LoginView()
+            } else if signInWithAppleMager.isUserAuthenticated == .signedIn {
+                //MainTabView()
+                //DeviceListView()
+                //lokaListView()
+                 DeviceListView()
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static let signWithAppleManger = SignInWithAppleManager()
+    
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(signWithAppleManger)
     }
 }

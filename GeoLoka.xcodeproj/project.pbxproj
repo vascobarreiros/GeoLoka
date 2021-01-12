@@ -7,19 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0B4C9A25A9FF4D0065732D /* scrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4C9925A9FF4D0065732D /* scrollView.swift */; };
+		BC0B4C9D25AA192E0065732D /* MapAllLokasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */; };
+		BC339E7425AB045900D61849 /* MapViewCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7325AB045900D61849 /* MapViewCoordinate.swift */; };
+		BC339E7725AB04A000D61849 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7625AB04A000D61849 /* MapView.swift */; };
+		BC339E7B25AB0C9900D61849 /* SingleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */; };
+		BC339E7F25AB125B00D61849 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7E25AB125B00D61849 /* BarView.swift */; };
+		BC339E8225AB197B00D61849 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E8125AB197B00D61849 /* BatteryView.swift */; };
+		BC339E8925AB3C2100D61849 /* TempChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E8825AB3C2100D61849 /* TempChartView.swift */; };
+		BC339E8E25AB5C5B00D61849 /* DeleteDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E8D25AB5C5B00D61849 /* DeleteDeviceView.swift */; };
+		BC339E9F25ABA71A00D61849 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E9E25ABA71A00D61849 /* DeviceListView.swift */; };
+		BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339EA625AC58F800D61849 /* PullToRefresh.swift */; };
+		BC339EAA25AC5AAB00D61849 /* lokaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339EA925AC5AAB00D61849 /* lokaListView.swift */; };
 		BC517C0C25A84A0400BEF9F8 /* GeoLokaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C0B25A84A0400BEF9F8 /* GeoLokaApp.swift */; };
 		BC517C0E25A84A0400BEF9F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C0D25A84A0400BEF9F8 /* ContentView.swift */; };
 		BC517C1025A84A0800BEF9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC517C0F25A84A0800BEF9F8 /* Assets.xcassets */; };
 		BC517C1325A84A0800BEF9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC517C1225A84A0800BEF9F8 /* Preview Assets.xcassets */; };
+		BC517C2125A84A5C00BEF9F8 /* EnvironmentWindowKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C1C25A84A5B00BEF9F8 /* EnvironmentWindowKey.swift */; };
+		BC517C2225A84A5C00BEF9F8 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C1D25A84A5B00BEF9F8 /* SignInWithAppleButton.swift */; };
+		BC517C2325A84A5C00BEF9F8 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C1E25A84A5B00BEF9F8 /* AuthState.swift */; };
+		BC517C2425A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C1F25A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift */; };
+		BC517C2525A84A5C00BEF9F8 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2025A84A5C00BEF9F8 /* SignInWithAppleManager.swift */; };
+		BC517C2925A84D4600BEF9F8 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */; };
+		BC517C2F25A851A700BEF9F8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2E25A851A700BEF9F8 /* LoginView.swift */; };
+		BC517C3225A8524000BEF9F8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3125A8524000BEF9F8 /* MainTabView.swift */; };
+		BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3525A8584400BEF9F8 /* SendUser.swift */; };
+		BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */; };
+		BC517C3F25A8C39E00BEF9F8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */; };
+		BC517C4325A8C4D100BEF9F8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C4225A8C4D100BEF9F8 /* SearchBar.swift */; };
+		BC517C4725A8CB8C00BEF9F8 /* AddDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C4625A8CB8C00BEF9F8 /* AddDevicesView.swift */; };
+		BC517C4D25A8CBE500BEF9F8 /* MapSingleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C4C25A8CBE500BEF9F8 /* MapSingleDeviceView.swift */; };
+		BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5225A8D38800BEF9F8 /* Spinner.swift */; };
+		BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5525A8D3DB00BEF9F8 /* Progress.swift */; };
+		BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */; };
+		BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CA25AD9757006453B9 /* SettingsView.swift */; };
+		BCA4E0CE25AD9B79006453B9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CD25AD9B79006453B9 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0B4C9925A9FF4D0065732D /* scrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollView.swift; sourceTree = "<group>"; };
+		BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAllLokasView.swift; sourceTree = "<group>"; };
+		BC339E7325AB045900D61849 /* MapViewCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinate.swift; sourceTree = "<group>"; };
+		BC339E7625AB04A000D61849 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDeviceView.swift; sourceTree = "<group>"; };
+		BC339E7E25AB125B00D61849 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		BC339E8125AB197B00D61849 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
+		BC339E8825AB3C2100D61849 /* TempChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartView.swift; sourceTree = "<group>"; };
+		BC339E8D25AB5C5B00D61849 /* DeleteDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDeviceView.swift; sourceTree = "<group>"; };
+		BC339E9E25ABA71A00D61849 /* DeviceListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		BC339EA625AC58F800D61849 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		BC339EA925AC5AAB00D61849 /* lokaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lokaListView.swift; sourceTree = "<group>"; };
 		BC517C0825A84A0400BEF9F8 /* GeoLoka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoLoka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC517C0B25A84A0400BEF9F8 /* GeoLokaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLokaApp.swift; sourceTree = "<group>"; };
 		BC517C0D25A84A0400BEF9F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC517C0F25A84A0800BEF9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC517C1225A84A0800BEF9F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC517C1425A84A0800BEF9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC517C1C25A84A5B00BEF9F8 /* EnvironmentWindowKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentWindowKey.swift; sourceTree = "<group>"; };
+		BC517C1D25A84A5B00BEF9F8 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		BC517C1E25A84A5B00BEF9F8 /* AuthState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		BC517C1F25A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleDelegates.swift; sourceTree = "<group>"; };
+		BC517C2025A84A5C00BEF9F8 /* SignInWithAppleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleManager.swift; sourceTree = "<group>"; };
+		BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		BC517C2C25A850AD00BEF9F8 /* GeoLoka.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoLoka.entitlements; sourceTree = "<group>"; };
+		BC517C2E25A851A700BEF9F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BC517C3125A8524000BEF9F8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		BC517C3525A8584400BEF9F8 /* SendUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendUser.swift; sourceTree = "<group>"; };
+		BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesModel.swift; sourceTree = "<group>"; };
+		BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		BC517C4225A8C4D100BEF9F8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		BC517C4625A8CB8C00BEF9F8 /* AddDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDevicesView.swift; sourceTree = "<group>"; };
+		BC517C4C25A8CBE500BEF9F8 /* MapSingleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSingleDeviceView.swift; sourceTree = "<group>"; };
+		BC517C5225A8D38800BEF9F8 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		BC517C5525A8D3DB00BEF9F8 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
+		BCA4E0CA25AD9757006453B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BCA4E0CD25AD9B79006453B9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +96,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC339E7125AB03F800D61849 /* MapViews */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */,
+				BC517C4C25A8CBE500BEF9F8 /* MapSingleDeviceView.swift */,
+				BC339E7325AB045900D61849 /* MapViewCoordinate.swift */,
+				BC339E7625AB04A000D61849 /* MapView.swift */,
+			);
+			path = MapViews;
+			sourceTree = "<group>";
+		};
+		BC339E7D25AB124800D61849 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				BC339E7E25AB125B00D61849 /* BarView.swift */,
+				BC339E8125AB197B00D61849 /* BatteryView.swift */,
+				BC339E8825AB3C2100D61849 /* TempChartView.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
 		BC517BFF25A84A0300BEF9F8 = {
 			isa = PBXGroup;
 			children = (
+				BC339E7D25AB124800D61849 /* Graphs */,
+				BC339E7125AB03F800D61849 /* MapViews */,
+				BC517C4125A8C4BC00BEF9F8 /* Helpers */,
+				BC517C3925A8A8F800BEF9F8 /* Model */,
+				BC517C3425A8582800BEF9F8 /* SendDataServer */,
+				BC517C2725A84D3600BEF9F8 /* Views */,
+				BC517C1B25A84A3700BEF9F8 /* SiginHelpers */,
 				BC517C0A25A84A0400BEF9F8 /* GeoLoka */,
 				BC517C0925A84A0400BEF9F8 /* Products */,
 			);
@@ -52,6 +143,7 @@
 		BC517C0A25A84A0400BEF9F8 /* GeoLoka */ = {
 			isa = PBXGroup;
 			children = (
+				BC517C2C25A850AD00BEF9F8 /* GeoLoka.entitlements */,
 				BC517C0B25A84A0400BEF9F8 /* GeoLokaApp.swift */,
 				BC517C0D25A84A0400BEF9F8 /* ContentView.swift */,
 				BC517C0F25A84A0800BEF9F8 /* Assets.xcassets */,
@@ -67,6 +159,65 @@
 				BC517C1225A84A0800BEF9F8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC517C1B25A84A3700BEF9F8 /* SiginHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC517C1E25A84A5B00BEF9F8 /* AuthState.swift */,
+				BC517C1C25A84A5B00BEF9F8 /* EnvironmentWindowKey.swift */,
+				BC517C1D25A84A5B00BEF9F8 /* SignInWithAppleButton.swift */,
+				BC517C1F25A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift */,
+				BC517C2025A84A5C00BEF9F8 /* SignInWithAppleManager.swift */,
+			);
+			path = SiginHelpers;
+			sourceTree = "<group>";
+		};
+		BC517C2725A84D3600BEF9F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */,
+				BC339E9E25ABA71A00D61849 /* DeviceListView.swift */,
+				BC517C2E25A851A700BEF9F8 /* LoginView.swift */,
+				BC517C3125A8524000BEF9F8 /* MainTabView.swift */,
+				BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */,
+				BC517C4625A8CB8C00BEF9F8 /* AddDevicesView.swift */,
+				BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */,
+				BC339E8D25AB5C5B00D61849 /* DeleteDeviceView.swift */,
+				BC339EA925AC5AAB00D61849 /* lokaListView.swift */,
+				BCA4E0CA25AD9757006453B9 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC517C3425A8582800BEF9F8 /* SendDataServer */ = {
+			isa = PBXGroup;
+			children = (
+				BC517C3525A8584400BEF9F8 /* SendUser.swift */,
+			);
+			path = SendDataServer;
+			sourceTree = "<group>";
+		};
+		BC517C3925A8A8F800BEF9F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */,
+				BC517C5525A8D3DB00BEF9F8 /* Progress.swift */,
+				BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */,
+				BCA4E0CD25AD9B79006453B9 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC517C4125A8C4BC00BEF9F8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC517C4225A8C4D100BEF9F8 /* SearchBar.swift */,
+				BC339EA625AC58F800D61849 /* PullToRefresh.swift */,
+				BC517C5225A8D38800BEF9F8 /* Spinner.swift */,
+				BC0B4C9925A9FF4D0065732D /* scrollView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +289,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC517C3F25A8C39E00BEF9F8 /* SwiftUIView.swift in Sources */,
+				BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */,
+				BC517C2225A84A5C00BEF9F8 /* SignInWithAppleButton.swift in Sources */,
+				BC339E7425AB045900D61849 /* MapViewCoordinate.swift in Sources */,
+				BC339E7B25AB0C9900D61849 /* SingleDeviceView.swift in Sources */,
 				BC517C0E25A84A0400BEF9F8 /* ContentView.swift in Sources */,
+				BC517C2325A84A5C00BEF9F8 /* AuthState.swift in Sources */,
+				BC517C2F25A851A700BEF9F8 /* LoginView.swift in Sources */,
+				BC339E8E25AB5C5B00D61849 /* DeleteDeviceView.swift in Sources */,
+				BCA4E0CE25AD9B79006453B9 /* Settings.swift in Sources */,
+				BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */,
+				BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */,
+				BC517C4D25A8CBE500BEF9F8 /* MapSingleDeviceView.swift in Sources */,
+				BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */,
+				BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */,
+				BC339E7725AB04A000D61849 /* MapView.swift in Sources */,
+				BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */,
+				BC517C4325A8C4D100BEF9F8 /* SearchBar.swift in Sources */,
+				BC517C2525A84A5C00BEF9F8 /* SignInWithAppleManager.swift in Sources */,
 				BC517C0C25A84A0400BEF9F8 /* GeoLokaApp.swift in Sources */,
+				BC339E8225AB197B00D61849 /* BatteryView.swift in Sources */,
+				BC339E7F25AB125B00D61849 /* BarView.swift in Sources */,
+				BC339E9F25ABA71A00D61849 /* DeviceListView.swift in Sources */,
+				BC517C2125A84A5C00BEF9F8 /* EnvironmentWindowKey.swift in Sources */,
+				BC0B4C9A25A9FF4D0065732D /* scrollView.swift in Sources */,
+				BC517C4725A8CB8C00BEF9F8 /* AddDevicesView.swift in Sources */,
+				BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */,
+				BC339EAA25AC5AAB00D61849 /* lokaListView.swift in Sources */,
+				BC517C2425A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift in Sources */,
+				BC0B4C9D25AA192E0065732D /* MapAllLokasView.swift in Sources */,
+				BC339E8925AB3C2100D61849 /* TempChartView.swift in Sources */,
+				BC517C2925A84D4600BEF9F8 /* LaunchScreenView.swift in Sources */,
+				BC517C3225A8524000BEF9F8 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +449,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GeoLoka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -289,12 +473,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GeoLoka/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
