@@ -17,6 +17,7 @@ struct MapallLokasView: UIViewRepresentable {
     var shared_all : GettingAllMapData
     var identifier : String
     var delta_hours : Int
+    var raio: Double
     
     func updateUIView(_ uiView2: MKMapView, context: Context) {
         
@@ -37,7 +38,7 @@ struct MapallLokasView: UIViewRepresentable {
                             
                             {
                                 
-                                if locations.accuracy <= 500
+                                if locations.accuracy <= raio
                                 {
                                     if locations.temperature == nil {
                                             temp = "N/A"
@@ -90,6 +91,6 @@ struct MapallLokasView: UIViewRepresentable {
 
 struct MapallLokasView_Previews: PreviewProvider {
     static var previews: some View {
-        MapallLokasView(shared_all: .init(), identifier:"000156.42f100f369164279a37b77c63f2dab3f.1008",delta_hours:48)
+        MapallLokasView(shared_all: .init(), identifier:"000156.42f100f369164279a37b77c63f2dab3f.1008",delta_hours:48, raio: 100.0)
     }
 }

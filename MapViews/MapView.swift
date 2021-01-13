@@ -29,10 +29,11 @@ class MyAnnotation: NSObject, MKAnnotation {
 
 struct MapView: UIViewRepresentable {
     
+  
     var shared_single : GettingSingleMapData
     var time : Int
     var escolha : String
-   // @EnvironmentObject var modelData: ModelData_new
+    var raio: Double
     
     func makeCoordinator() -> MapViewCoordinator{
             MapViewCoordinator(self)
@@ -60,8 +61,9 @@ struct MapView: UIViewRepresentable {
                      
                         for locations in lokas {
                             
-                            if locations.accuracy <= 500
+                            if locations.accuracy <= raio
                             {
+                           // print("Accuracy set at = \(userSettings.accuracy)")
                             var mapRegion = MKCoordinateRegion()
                             let mapRegionSpan = 0.2
                             mapRegion.span.latitudeDelta = mapRegionSpan
@@ -119,7 +121,7 @@ struct MapindLokasView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        MapView(shared_single: .init(), time:24, escolha:"7B07E7")
+        MapView(shared_single: .init(), time:24, escolha:"7B07E7", raio: 100)
     }
 }
 

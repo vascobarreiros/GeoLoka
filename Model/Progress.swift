@@ -35,6 +35,11 @@ class SendData: ObservableObject {
     
 }
 
+class DeviceRemoved : ObservableObject {
+    
+    @Published var deviceRemoved = false
+        
+    }
 
 
 

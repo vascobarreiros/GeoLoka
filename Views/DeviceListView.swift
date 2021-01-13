@@ -15,7 +15,9 @@ struct DeviceListView: View {
     @State var tabSelection: Tabs = .tab1
     @ObservedObject var done_All_map = GettingAllMapData()
     @ObservedObject var done_Single_map = GettingSingleMapData()
-    @State var selectedDate = Date()
+    @ObservedObject var observer = Observer()
+    @State var currentDate = Date()
+        let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
     
     var filteredLokas: [Device] {
         getDevices_by_identifier.lokas_ids.filter { loka in
@@ -52,11 +54,9 @@ struct DeviceListView: View {
                         VStack {
                             ZStack {
                                 VStack {
-                                    MapallLokasView(shared_all: done_All_map, identifier:UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!,delta_hours:48).edgesIgnoringSafeArea(.top)
-                                    
-                                }
-                                Spinner(isAnimating: done_All_map.doneGettingAllMapData, style: .large, color: .green)
-                            }
+                                    AllDevicesView(identifier: UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)
+                                       }
+                                   }
                         }.navigationBarTitle("Tab2")
                         .tabItem {
                             Image(systemName: "person.3.fill")
@@ -64,40 +64,71 @@ struct DeviceListView: View {
                         }.tag(Tabs.tab2)
                         
                         VStack {
-                            AddDevicesView()
+                            SettingsView()
                         }.navigationBarTitle("Tab3")
                         .tabItem {
                             Image(systemName: "gear")
                             Text("Settings")
                         }.tag(Tabs.tab3)
-                    }.navigationTitle("Available Devices").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+                        
+                        
+                    }.navigationTitle("GeoLoKa").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
                 }
             }
+            Spinner(isAnimating: getDevices_by_identifier.donefetchingData, style: .large, color: .green)
         }
         .onAppear {
                getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
                 getDevices_by_identifier.fetchdevices()
-                
             }
+        .onDisappear {
+               getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
+                getDevices_by_identifier.fetchdevices()
+            }
+        .onReceive(self.observer.$enteredForeground) { _ in
+                    print("App entered foreground!") // do stuff here
+                   getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
+                    getDevices_by_identifier.fetchdevices()
+                }
+        .onReceive(timer) { input in
+            self.currentDate = input
+            print("refreshing")
+            getDevices_by_identifier.donefetchingData = true
+            getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
+             getDevices_by_identifier.fetchdevices()
+                    }
         
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            self.selectedDate = Date()
-            
-        }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-            self.selectedDate = Date()
-            
-        }
-        Spinner(isAnimating: getDevices_by_identifier.donefetchingData, style: .large, color: .green)
     }
     
     enum Tabs{
         case tab1, tab2, tab3
     }
     
+    class Observer: ObservableObject {
+
+        @Published var enteredForeground = true
+
+        init() {
+            if #available(iOS 13.0, *) {
+                NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIScene.willEnterForegroundNotification, object: nil)
+            } else {
+                NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+            }
+        }
+
+        @objc func willEnterForeground() {
+            enteredForeground.toggle()
+        }
+    }
+    
+    
+    
+    
     
     
     struct DeviceListView_Previews: PreviewProvider {
+        
+        
         static var previews: some View {
             DeviceListView()
         }

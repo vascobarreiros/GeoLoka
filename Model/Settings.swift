@@ -7,8 +7,4 @@
 
 import Foundation
 
-struct Settings: Identifiable {
-    
-    var id: UUID = UUID()
-    var timeDelta : Int = 24
-}
+

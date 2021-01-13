@@ -50,7 +50,7 @@ struct MainTabView: View {
                         VStack {
                             ZStack {
                                 VStack {
-                                    MapallLokasView(shared_all: done_All_map, identifier:UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!,delta_hours:48).edgesIgnoringSafeArea(.top)
+                                    MapallLokasView(shared_all: done_All_map, identifier:UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!,delta_hours:48, raio: 100).edgesIgnoringSafeArea(.top)
                                 }
                                 Spinner(isAnimating: done_All_map.doneGettingAllMapData, style: .large, color: .green)
                             }

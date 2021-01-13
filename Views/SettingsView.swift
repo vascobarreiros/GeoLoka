@@ -12,13 +12,22 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: Text("1 View")) {
-                       Text("Add a New Device")
+                List {
+                NavigationLink(destination: AddDevicesView()) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Image(systemName: "car.2.fill")
+                        Text("Add a New Device")
+                    }
                    }
-                NavigationLink(destination: Text("2 View")) {
-                       Text("Set time Interval")
+                NavigationLink(destination: Text("TBD")) {
+                    HStack {
+                        Image(systemName: "clock.arrow.circlepath")
+                        Text("Set time Interval")
+                    }
                    }
-                  .navigationTitle("Settings").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+                }
+                .navigationTitle("Settings").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             }
         
         }

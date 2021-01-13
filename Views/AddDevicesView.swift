@@ -28,79 +28,90 @@ struct AddDevicesView: View {
     @State var existe : Bool = false
     
     var body: some View {
-        VStack {
-            NavigationView {
-                VStack {
-                    Text("")
-                    TextField("Device ID ", text: $device_id)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .textCase(.uppercase)
-                        .padding(.horizontal)
-                    TextField("Device Name", text: $device_name)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal)
-                    Text("")
-                    Button(action: {
-                        print("Add Device in Add device view")
-                        let urlString = "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_devices_unique.php?device=\(device_id)"
-                        if let url = URL(string: urlString){
-                            let session = URLSession(configuration: .default)
-                            let task = session.dataTask(with: url) { (data, response, error) in
-                                if error == nil{
-                                    let decoder = JSONDecoder()
-                                    if let safeData = data{
-                                        do{
-                                            let results = try decoder.decode([Device_unique].self, from: safeData)
-                                            DispatchQueue.main.async {
-                                                print("Numero de devices unicos é de = \(results.count)")
-                                                if results.count == 1 {
-                                                    existe = true
-                                                    self.showAlert = true
-                                                    self.activeAlert = .first
-                                                print("I'm adding the device")
-                                                loadDeviceToServer(device_id: device_id, device_name: device_name, identifier: UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)
+        ZStack {
+            VStack {
+             //   NavigationView {
+                    VStack {
+                        Spacer()
+                        TextField("Device ID ", text: $device_id)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .textCase(.uppercase)
+                            .padding(.horizontal)
+                        TextField("Device Name", text: $device_name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.horizontal)
+                        Text("")
+                        Button(action: {
+                            print("Add Device in Add device view")
+                            let urlString = "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_devices_unique.php?device=\(device_id)"
+                            if let url = URL(string: urlString){
+                                let session = URLSession(configuration: .default)
+                                let task = session.dataTask(with: url) { (data, response, error) in
+                                    if error == nil{
+                                        let decoder = JSONDecoder()
+                                        if let safeData = data{
+                                            do{
+                                                let results = try decoder.decode([Device_unique].self, from: safeData)
+                                                DispatchQueue.main.async {
+                                                    print("Numero de devices unicos é de = \(results.count)")
+                                                    if results.count == 1 {
+                                                        existe = true
+                                                        self.showAlert = true
+                                                        self.activeAlert = .first
+                                                    print("I'm adding the device")
+                                                    loadDeviceToServer(device_id: device_id, device_name: device_name, identifier: UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)
+                                                    }
+                                                    else {
+                                                        self.showAlert = true
+                                                        self.activeAlert = .second
+                                                     print("I'm not adding the device")
+                                                    }
+                                                    
                                                 }
-                                                else {
-                                                    self.showAlert = true
-                                                    self.activeAlert = .second
-                                                 print("I'm not adding the device")
-                                                }
-                                                
+                                            } catch{
+                                                print(error)
                                             }
-                                        } catch{
-                                            print(error)
                                         }
                                     }
                                 }
+                                task.resume()
                             }
-                            task.resume()
+                        }, label: {
+                            VStack {
+                                
+                                HStack(spacing: 10) {
+                                    Image(systemName: "car.2")
+                                    Text("Add Device")
+                                }.padding()
+                                
+                            }.padding()
+                        })
+                        .alert(isPresented: $showAlert) {
+                            switch activeAlert {
+                            case .first:
+                                return Alert(title: Text("Device added"), message: Text("Device \(device_id) has been added"), dismissButton: .default(Text("Got it!")))
+                            case .second:
+                                return Alert(title: Text("Device NOT added"), message: Text("The device \(device_id) does not exist in the Sigfox Backend or has not been added to the proper Device Type"), dismissButton: .default(Text("Ok")))
+                                
+                            }
                         }
-                    }, label: {
-                        HStack(spacing: 10) {
-                            Image(systemName: "car.2")
-                            Text("Add Device")
-                        }
-                    }).alert(isPresented: $showAlert) {
-                        switch activeAlert {
-                        case .first:
-                            return Alert(title: Text("Device added"), message: Text("-"), dismissButton: .default(Text("Got it!")))
-                        case .second:
-                            return Alert(title: Text("Device NOT added"), message: Text("The device \(device_id) does not exist in the Sigfox Backend or has not been added to the proper Device Type"), dismissButton: .default(Text("Got it!")))
-                            
-                        }
-                    }
-                    
-                    
-                    
-                    
-                    
-                    
-                }
-                .navigationBarTitle("Add Device")
-                .offset(y: -self.keyboardOffset)
-                .background(Color(UIColor.systemGray6))
-            }
-        }
+                        
+                        
+                     
+                    }.background(Color.black)
+                    .navigationBarTitle("Add a New Device")
+                    .offset(y: -self.keyboardOffset)
+                    .background(Color(UIColor.systemGray6))
+                
+                
+                Text("Note: Enter the Hexadecimal Device ID exactly has it is in the Loka device label")
+                    .font(.subheadline)
+                    .foregroundColor(Color.white)
+                Image("loka").scaledToFill()
+                Spacer()
+            }.background(Color.black)
+        }.background(Color.black)
+        
         
     }
     

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
+   
     
     var body: some View {
         ZStack {
@@ -21,9 +22,9 @@ struct ContentView: View {
                    LoginView()
             } else if signInWithAppleMager.isUserAuthenticated == .signedIn {
                 //MainTabView()
-                //DeviceListView()
-                //lokaListView()
-                 DeviceListView()
+                DeviceListView()
+               // lokaListView()
+                 //DeviceListView()
             }
         }
     }
@@ -33,7 +34,9 @@ struct ContentView_Previews: PreviewProvider {
     
     static let signWithAppleManger = SignInWithAppleManager()
     
+    
     static var previews: some View {
         ContentView().environmentObject(signWithAppleManger)
+            
     }
 }

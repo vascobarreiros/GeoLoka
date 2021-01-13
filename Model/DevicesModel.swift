@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 struct Device: Hashable, Decodable {
     var device_id: String
@@ -141,3 +142,13 @@ class GetUniqueDevices: ObservableObject {
         }
     }
 }
+
+
+
+
+ 
+
+
+
+
+

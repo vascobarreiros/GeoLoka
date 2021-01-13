@@ -13,7 +13,9 @@ struct SingleDeviceView: View {
     @State var selection = 1
     @State var escolha : String
     
-    
+    @State private var selectorIndex = 1
+    @State private var accuracy = ["All","0-100","100-500","500-1000"," > 1000"]
+    @State private var accuracyNumber = [1000000.0,100.0,500.0,1000.0]
     
     var body: some View {
         
@@ -21,7 +23,14 @@ struct SingleDeviceView: View {
         
             ZStack {
                 VStack {
-                    MapView(shared_single: done_Single_map,time:24, escolha: escolha)
+                    Text("GeoPosition Accuracy(m)")
+                    Picker("", selection: $selectorIndex) {
+                        ForEach(0 ..< accuracyNumber.count) { index in
+                            Text(self.accuracy[index]).tag(index)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    MapView(shared_single: done_Single_map,time:24, escolha: escolha, raio: accuracyNumber[selectorIndex])
                 }
                 Spinner(isAnimating: done_Single_map.doneGettingSingleMapData, style: .large, color: .green)
             }.tabItem {

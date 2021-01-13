@@ -86,8 +86,10 @@ struct LaunchScreenView: View {
 struct LaunchScreenView_Previews: PreviewProvider {
     
     static let signWithAppleManger = SignInWithAppleManager()
+
     
     static var previews: some View {
         LaunchScreenView().environmentObject(signWithAppleManger)
+         
     }
 }

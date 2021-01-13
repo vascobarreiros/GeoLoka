@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0B4C9A25A9FF4D0065732D /* scrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4C9925A9FF4D0065732D /* scrollView.swift */; };
 		BC0B4C9D25AA192E0065732D /* MapAllLokasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */; };
 		BC339E7425AB045900D61849 /* MapViewCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7325AB045900D61849 /* MapViewCoordinate.swift */; };
 		BC339E7725AB04A000D61849 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7625AB04A000D61849 /* MapView.swift */; };
@@ -42,10 +41,10 @@
 		BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */; };
 		BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CA25AD9757006453B9 /* SettingsView.swift */; };
 		BCA4E0CE25AD9B79006453B9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CD25AD9B79006453B9 /* Settings.swift */; };
+		BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5604525AE170B0013AE17 /* AllDevicesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC0B4C9925A9FF4D0065732D /* scrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollView.swift; sourceTree = "<group>"; };
 		BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAllLokasView.swift; sourceTree = "<group>"; };
 		BC339E7325AB045900D61849 /* MapViewCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinate.swift; sourceTree = "<group>"; };
 		BC339E7625AB04A000D61849 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
 		BCA4E0CA25AD9757006453B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BCA4E0CD25AD9B79006453B9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BCC5604525AE170B0013AE17 /* AllDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +186,7 @@
 				BC339E8D25AB5C5B00D61849 /* DeleteDeviceView.swift */,
 				BC339EA925AC5AAB00D61849 /* lokaListView.swift */,
 				BCA4E0CA25AD9757006453B9 /* SettingsView.swift */,
+				BCC5604525AE170B0013AE17 /* AllDevicesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,7 +216,6 @@
 				BC517C4225A8C4D100BEF9F8 /* SearchBar.swift */,
 				BC339EA625AC58F800D61849 /* PullToRefresh.swift */,
 				BC517C5225A8D38800BEF9F8 /* Spinner.swift */,
-				BC0B4C9925A9FF4D0065732D /* scrollView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -303,6 +303,7 @@
 				BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */,
 				BC517C4D25A8CBE500BEF9F8 /* MapSingleDeviceView.swift in Sources */,
 				BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */,
+				BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */,
 				BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */,
 				BC339E7725AB04A000D61849 /* MapView.swift in Sources */,
 				BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */,
@@ -313,7 +314,6 @@
 				BC339E7F25AB125B00D61849 /* BarView.swift in Sources */,
 				BC339E9F25ABA71A00D61849 /* DeviceListView.swift in Sources */,
 				BC517C2125A84A5C00BEF9F8 /* EnvironmentWindowKey.swift in Sources */,
-				BC0B4C9A25A9FF4D0065732D /* scrollView.swift in Sources */,
 				BC517C4725A8CB8C00BEF9F8 /* AddDevicesView.swift in Sources */,
 				BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */,
 				BC339EAA25AC5AAB00D61849 /* lokaListView.swift in Sources */,
@@ -451,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -475,7 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;

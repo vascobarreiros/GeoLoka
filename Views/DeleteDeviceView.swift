@@ -13,13 +13,15 @@ struct DeleteDeviceView: View {
     @State private var showconfirmation = false
     @ObservedObject var getDevices_by_identifier = GetDevices_by_identifier()
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
+   // @EnvironmentObject var removed : DeviceRemoved
     
     var body: some View {
         VStack{
             Text("Delete Device = \(escolha)")
                 .font(.title2)
             Button(action: {
-                print("delete Device")
+                print("I'm going to delete the Device")
+                //removed.deviceRemoved = true
                 deleteDevicefromServer(device_id: escolha)
                 getDevices_by_identifier.fetchdevices()
                 getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
@@ -32,7 +34,9 @@ struct DeleteDeviceView: View {
                          .background(Color.red)
                          .cornerRadius(40)
                 }).alert(isPresented: $showconfirmation) {
-                    Alert(title: Text("Device Deleted"), message: Text("-"), dismissButton: .default(Text("Got it!")))}
+                    Alert(title: Text("Device Deleted"), message: Text("Device \(escolha) was deleted"), dismissButton: .default(Text("Ok")))
+                    
+                }
         }
         }
     
@@ -98,8 +102,7 @@ struct DeleteDeviceView: View {
                                         print("Upload 3 - All Good")
                                         //donesendingdata = true
                                         //self.donesenddata = true
-                                            self.showconfirmation = true
-                                            
+                                        self.showconfirmation = true
                                         }
                                     }
                                 }
