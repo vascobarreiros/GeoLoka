@@ -39,8 +39,9 @@ struct DeviceListView: View {
                                     SingleDeviceView(done_Single_map: done_Single_map, escolha: loka.device_id),
                                 label: {
                                     HStack {
-                                        Text(loka.device_id)
-                                        Text("-")
+                                       // Text(loka.device_id)
+                                        Text(String(Int(loka.device_id , radix: 16)!))
+                                        Text("(\(loka.device_id))")
                                         Text(loka.device_name)
                                     }
                                 })

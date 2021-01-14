@@ -30,6 +30,13 @@ struct ContentView: View {
     }
 }
 
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        overrideUserInterfaceStyle = .dark
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     
     static let signWithAppleManger = SignInWithAppleManager()

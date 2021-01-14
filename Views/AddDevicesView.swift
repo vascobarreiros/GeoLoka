@@ -11,12 +11,26 @@ enum ActiveAlert {
     case first, second
 }
 
+class NumbersOnly: ObservableObject {
+    @Published var value = "" {
+        didSet {
+            let filtered = value.filter { $0.isNumber }
+            
+            if value != filtered {
+                value = filtered
+            }
+        }
+    }
+}
+
+
 
 struct AddDevicesView: View {
     
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
     @State var device_id: String = ""
     @State var device_name: String = ""
+    @ObservedObject var input = NumbersOnly()
     @State private var keyboardOffset: CGFloat = 0
    // @State private var showingAlert = false
     @State private var showconfirmation = false
@@ -30,19 +44,25 @@ struct AddDevicesView: View {
     var body: some View {
         ZStack {
             VStack {
-             //   NavigationView {
+               NavigationView {
                     VStack {
                         Spacer()
-                        TextField("Device ID ", text: $device_id)
+                        TextField("Device ID ", text: $input.value)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
                             .textCase(.uppercase)
                             .padding(.horizontal)
+                            
                         TextField("Device Name", text: $device_name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal)
                         Text("")
+                        Section {
                         Button(action: {
-                            print("Add Device in Add device view")
+                            print("Lets try to Add Device")
+                            let device_id_int = Int(input.value)
+                            device_id = String(NSString(format:"%2X", device_id_int!))
+                            print ("Device ID in Hex = \(device_id)")
                             let urlString = "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_devices_unique.php?device=\(device_id)"
                             if let url = URL(string: urlString){
                                 let session = URLSession(configuration: .default)
@@ -86,6 +106,8 @@ struct AddDevicesView: View {
                                 
                             }.padding()
                         })
+                    }
+                        .disabled(input.value.isEmpty || device_name.isEmpty)
                         .alert(isPresented: $showAlert) {
                             switch activeAlert {
                             case .first:
@@ -96,7 +118,7 @@ struct AddDevicesView: View {
                             }
                         }
                         
-                        
+                    }
                      
                     }.background(Color.black)
                     .navigationBarTitle("Add a New Device")
@@ -104,7 +126,7 @@ struct AddDevicesView: View {
                     .background(Color(UIColor.systemGray6))
                 
                 
-                Text("Note: Enter the Hexadecimal Device ID exactly has it is in the Loka device label")
+                Text("Note: Enter the Device ID exactly has it is in the Loka device label")
                     .font(.subheadline)
                     .foregroundColor(Color.white)
                 Image("loka").scaledToFill()
