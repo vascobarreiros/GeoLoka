@@ -17,13 +17,13 @@ struct SettingsView: View {
                     HStack {
                         Image(systemName: "plus.circle.fill")
                         Image(systemName: "car.2.fill")
-                        Text("Add a New Device")
+                        Text(NSLocalizedString("Add a New Device",comment: ""))
                     }
                    }
                 NavigationLink(destination: Text("TBD")) {
                     HStack {
                         Image(systemName: "clock.arrow.circlepath")
-                        Text("Set time Interval")
+                        Text(NSLocalizedString("Set time Interval",comment: ""))
                     }
                    }
                 }

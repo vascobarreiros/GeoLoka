@@ -23,7 +23,7 @@ struct SingleDeviceView: View {
         
             ZStack {
                 VStack {
-                    Text("GeoPosition Accuracy(m)")
+                    Text(NSLocalizedString("GeoPosition Accuracy(m)",comment: ""))
                     Picker("", selection: $selectorIndex) {
                         ForEach(0 ..< accuracyNumber.count) { index in
                             Text(self.accuracy[index]).tag(index)
@@ -35,7 +35,7 @@ struct SingleDeviceView: View {
                 Spinner(isAnimating: done_Single_map.doneGettingSingleMapData, style: .large, color: .green)
             }.tabItem {
                 Image(systemName: "map")
-                Text("Device position")
+                Text(NSLocalizedString("Device position", comment: ""))
              }.tag(1)
             VStack {
                 ZStack {
@@ -47,13 +47,13 @@ struct SingleDeviceView: View {
                 }
             }.tabItem {
                 Image(systemName: "thermometer")
-                Text("Temperature & Battery")
+                Text(NSLocalizedString("Temperature & Battery", comment: ""))
                 }.tag(2)
             VStack {
                 DeleteDeviceView(escolha: escolha)
             }.tabItem {
                 Image(systemName: "minus.circle.fill")
-                Text("Remove Device")
+                Text(NSLocalizedString("Remove Device",comment: ""))
                 }.tag(3)
             
             

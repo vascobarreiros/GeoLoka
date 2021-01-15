@@ -19,7 +19,7 @@ struct BatteryView: View {
             Color(.black).edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
-                Text("Battery Usage")
+                Text(NSLocalizedString("Battery Usage",comment: ""))
                     .foregroundColor(Color.white)
                 ProgressBar(progress: $battery_perc)
                     .frame(width: 150.0, height: 150.0)

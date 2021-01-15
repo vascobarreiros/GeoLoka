@@ -50,7 +50,7 @@ struct DeviceListView: View {
                         .navigationBarTitle("Tab1")
                         .tabItem {
                             Image(systemName: "person.fill")
-                            Text("Map Individual Devices")
+                            Text(NSLocalizedString("Map Individual Devices", comment: ""))
                         }.tag(Tabs.tab1)
                         VStack {
                             ZStack {
@@ -61,7 +61,7 @@ struct DeviceListView: View {
                         }.navigationBarTitle("Tab2")
                         .tabItem {
                             Image(systemName: "person.3.fill")
-                            Text("Map All Devices")
+                            Text(NSLocalizedString("Map All Devices", comment: ""))
                         }.tag(Tabs.tab2)
                         
                         VStack {
@@ -69,7 +69,7 @@ struct DeviceListView: View {
                         }.navigationBarTitle("Tab3")
                         .tabItem {
                             Image(systemName: "gear")
-                            Text("Settings")
+                            Text(NSLocalizedString("Settings",comment: ""))
                         }.tag(Tabs.tab3)
                         
                         

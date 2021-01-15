@@ -63,7 +63,6 @@ struct MapView: UIViewRepresentable {
                             
                             if locations.accuracy <= raio
                             {
-                           // print("Accuracy set at = \(userSettings.accuracy)")
                             var mapRegion = MKCoordinateRegion()
                             let mapRegionSpan = 0.2
                             mapRegion.span.latitudeDelta = mapRegionSpan
@@ -72,7 +71,6 @@ struct MapView: UIViewRepresentable {
                                     temp = "N/A"
                                 }
                             else {
-                                //temperatura.append(locations.temperature!)
                                 temp = String(locations.temperature!)
                                 }
                             let destination = CLLocationCoordinate2D(latitude: locations.lat, longitude: locations.lng)
@@ -89,7 +87,7 @@ struct MapView: UIViewRepresentable {
                             uiView.addOverlay(circle)
                          }
                     }
-                    print("doing map one")
+                    print("adding lokas to map")
                     uiView.addAnnotations(allLocations as [MKAnnotation])
                     let polyline = MKPolyline(coordinates: locations_map, count: locations_map.count )
                     uiView.addOverlay(polyline,level: .aboveRoads)
@@ -121,7 +119,7 @@ struct MapindLokasView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        MapView(shared_single: .init(), time:24, escolha:"7B07E7", raio: 100)
+        MapView(shared_single: .init(), time:24, escolha:"7B07E7", raio: 10000)
     }
 }
 

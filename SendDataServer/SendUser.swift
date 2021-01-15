@@ -10,13 +10,16 @@ import Foundation
 import SwiftUI
 import UIKit
 
-func loadUserToServer(identifier:String) {
+func loadUserToServer(identifier:String,name:String,familyname:String,email:String) {
 
 let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/put_identifier.php")!
 var request = URLRequest(url: url)
 request.httpMethod = "POST"
     var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord
     dataString = dataString + "&identifier=\(identifier)"
+    dataString = dataString + "name=\(name)"
+    dataString = dataString + "familyname=\(familyname)"
+    dataString = dataString + "email=\(email)"
     let dataD = dataString.data(using: .utf8) // convert to utf8 string
     do
     {

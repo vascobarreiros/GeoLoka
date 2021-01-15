@@ -22,7 +22,7 @@ extension SignInWithAppleDelegates: ASAuthorizationControllerDelegate {
     
     private func registerNewAccount(credential: ASAuthorizationAppleIDCredential) {
         print("Registering new account with user(This is for the Server): \(credential.user)")
-        loadUserToServer(identifier: credential.user)
+        loadUserToServer(identifier: credential.user, name: credential.fullName?.givenName ?? "",familyname: credential.fullName?.familyName ?? "",email: credential.email ?? "")
         // This will send the Apple unique user identifier
         // to the GCP server in a table in Bigquery - This table will have also the time this was done.
         // This table propose will be to identify the user across several Apple devices and will also enable

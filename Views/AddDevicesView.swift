@@ -4,8 +4,13 @@
 //
 //  Created by Vasco Barreiros on 08/01/2021.
 //
+// This View will add Loka devices to a table in GCP called devices
+// each device will be associated with the user identifier, before adding the devices there will be a check if the device exists
+// in a table loka within the GCP for this there is a cloudrun php called get_devices_unique.php that has all the devices being collected via callback. Another check that needs to be done is if the device allready exists not done yet
+
 
 import SwiftUI
+import Combine
 
 enum ActiveAlert {
     case first, second
@@ -24,7 +29,6 @@ class NumbersOnly: ObservableObject {
 }
 
 
-
 struct AddDevicesView: View {
     
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
@@ -40,22 +44,41 @@ struct AddDevicesView: View {
     @State private var showAlert = false
     @State private var activeAlert: ActiveAlert = .first
     @State var existe : Bool = false
+    let textLimit = 7 //This is the limit of the Loka deviceID length
+    
+    //Function to keep text length in limits
+        func limitText(_ upper: Int) {
+            if input.value.count > upper {
+                input.value = String(input.value.prefix(upper))
+            }
+        }
+    
     
     var body: some View {
         ZStack {
             VStack {
-               NavigationView {
+              // NavigationView {
                     VStack {
-                        Spacer()
-                        TextField("Device ID ", text: $input.value)
+                        //Spacer()
+                        Text("")
+                        Text("")
+                        Text("")
+                        Text("")
+                        Text("")
+                        Text("")
+                        TextField(NSLocalizedString("Device ID (Decimal) ",comment: ""), text: $input.value)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.numberPad)
                             .textCase(.uppercase)
                             .padding(.horizontal)
-                            
-                        TextField("Device Name", text: $device_name)
+                            .foregroundColor(.white)
+                            .colorInvert()
+                            .onReceive(Just(input.value)) { _ in limitText(textLimit) }
+                        TextField(NSLocalizedString("Device Name",comment: ""), text: $device_name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal)
+                            .foregroundColor(.white)
+                            .colorInvert()
                         Text("")
                         Section {
                         Button(action: {
@@ -101,32 +124,32 @@ struct AddDevicesView: View {
                                 
                                 HStack(spacing: 10) {
                                     Image(systemName: "car.2")
-                                    Text("Add Device")
+                                    Text(NSLocalizedString("Add Device",comment: ""))
                                 }.padding()
                                 
                             }.padding()
                         })
                     }
-                        .disabled(input.value.isEmpty || device_name.isEmpty)
+                       // .disabled(input.value.isEmpty || device_name.isEmpty)
                         .alert(isPresented: $showAlert) {
                             switch activeAlert {
                             case .first:
-                                return Alert(title: Text("Device added"), message: Text("Device \(device_id) has been added"), dismissButton: .default(Text("Got it!")))
+                                return Alert(title: Text(NSLocalizedString("Device added",comment: "")), message: Text("Device \(device_id) has been added"), dismissButton: .default(Text("Got it!")))
                             case .second:
-                                return Alert(title: Text("Device NOT added"), message: Text("The device \(device_id) does not exist in the Sigfox Backend or has not been added to the proper Device Type"), dismissButton: .default(Text("Ok")))
+                                return Alert(title: Text(NSLocalizedString("Device NOT added",comment: "")), message: Text("The device \(device_id) does not exist in the Sigfox Backend or has not been added to the proper Device Type"), dismissButton: .default(Text("Ok")))
                                 
                             }
                         }
                         
                     }
                      
-                    }.background(Color.black)
+                    .background(Color.black)
                     .navigationBarTitle("Add a New Device")
                     .offset(y: -self.keyboardOffset)
                     .background(Color(UIColor.systemGray6))
                 
                 
-                Text("Note: Enter the Device ID exactly has it is in the Loka device label")
+                Text(NSLocalizedString("Note: Enter the Device ID exactly has it is in the Loka device label",comment: ""))
                     .font(.subheadline)
                     .foregroundColor(Color.white)
                 Image("loka").scaledToFill()
@@ -206,7 +229,7 @@ struct AddDevicesView: View {
                                         print("Upload 3 - All Good")
                                         //donesendingdata = true
                                         //self.donesenddata = true
-                                            self.showconfirmation = true
+                                        self.showconfirmation = true
                                             
                                         }
                                     }

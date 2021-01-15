@@ -4,6 +4,7 @@
 //
 //  Created by Vasco Barreiros on 10/01/2021.
 //
+// This view will delete devices asscoiated with each user from the table devices within the GCP
 
 import SwiftUI
 
@@ -13,7 +14,6 @@ struct DeleteDeviceView: View {
     @State private var showconfirmation = false
     @ObservedObject var getDevices_by_identifier = GetDevices_by_identifier()
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
-   // @EnvironmentObject var removed : DeviceRemoved
     
     var body: some View {
         VStack{
@@ -28,13 +28,13 @@ struct DeleteDeviceView: View {
                 }, label: {
                     HStack(spacing: 10) {
                             Image(systemName: "minus.circle.fill")
-                            Text("Delete Device").fontWeight(.bold)
+                            Text(NSLocalizedString("Delete Device", comment: "")).fontWeight(.bold)
                         }.padding()
                          .foregroundColor(.white)
                          .background(Color.red)
                          .cornerRadius(40)
                 }).alert(isPresented: $showconfirmation) {
-                    Alert(title: Text("Device Deleted"), message: Text("Device \(escolha) was deleted"), dismissButton: .default(Text("Ok")))
+                    Alert(title: Text(NSLocalizedString("Device Deleted",comment: "")), message: Text("Device \(escolha) was deleted"), dismissButton: .default(Text("Ok")))
                     
                 }
         }

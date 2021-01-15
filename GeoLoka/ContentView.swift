@@ -16,7 +16,8 @@ struct ContentView: View {
         ZStack {
             if signInWithAppleMager.isUserAuthenticated ==
                 .undefined {
-                  LaunchScreenView()
+                 LaunchScreenView()
+               // AddDevicesView()
                // LoginView()
             } else if signInWithAppleMager.isUserAuthenticated == .signedOut {
                    LoginView()

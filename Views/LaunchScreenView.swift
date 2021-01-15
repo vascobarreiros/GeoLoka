@@ -39,7 +39,7 @@ struct LaunchScreenView: View {
                 }
             }
         }.alert(isPresented: $isAlertPresented) {
-            Alert(title: Text("Welcome to GeoLoka - Please Sign In using Apple"), dismissButton: .default(Text("Ok"), action: {
+            Alert(title: Text(NSLocalizedString("Welcome to GeoLoka - Please Sign In using Apple",comment: "")), dismissButton: .default(Text("Ok"), action: {
                 //set isUserAuthenticated to signed out
                 self.signInWithAppleMager.isUserAuthenticated = .signedOut
             }))

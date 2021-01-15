@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  GeoLoka
+
+  Created by Vasco Barreiros on 14/01/2021.
+  
+*/
+"Map Individual Devices" = "Map Individual Devices";
+"Map All Devices" = "Map All Devices";
+"Settings" = "Settings";
+"GeoPosition Accuracy(m)" = "GeoPosition Accuracy(m)";
+"Device position" = "Device position";
+"Temperature & Battery" = "Temperature & Battery";
+"Remove Device" = "Remove Device";
+"Battery Usage" = "Battery Usage";
+"Temperature (ºC)" = "Temperature (ºC)";
+"Add a New Device" = "Add a New Device";
+"Set time Interval" = "Set time Interval";
+"Note: Enter the Device ID exactly has it is in the Loka device label" = "Note: Enter the Device ID exactly has it is in the Loka device label";
+"Device NOT added" = "Device NOT added";
+"Device added" = "Device added";
+"Add Device" = "Add Device";
+"Device ID (Decimal) " = "Device ID (Decimal) ";
+"Device Name" = "Device Name";
+"Welcome to GeoLoka - Please Sign In using Apple" = "Welcome to GeoLoka - Please Sign In using Apple";
+"Delete Device" = "Delete Device";
+"Device Deleted" = "Device Deleted";

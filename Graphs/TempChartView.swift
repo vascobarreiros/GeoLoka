@@ -20,7 +20,7 @@ struct TempChartView: View {
            ZStack{
                Color(.black).edgesIgnoringSafeArea(.all)
                VStack{
-                   Text("Temperature (ºC)").foregroundColor(.white)
+                   Text(NSLocalizedString("Temperature (ºC)",comment: "")).foregroundColor(.white)
                    HStack(alignment: .center, spacing: 10)
                    {
                        ForEach(

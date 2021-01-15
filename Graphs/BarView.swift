@@ -42,7 +42,7 @@ struct BarView: View{
 
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
-        BarView(value: 120, xvalue: "12:00", cornerRadius: 12)
+        BarView(value: 120, xvalue: "12:44:00", cornerRadius: 12)
     }
 }
 
