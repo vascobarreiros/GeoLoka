@@ -7,17 +7,18 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
     
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
-   
+    
     
     var body: some View {
         ZStack {
             if signInWithAppleMager.isUserAuthenticated ==
                 .undefined {
                  LaunchScreenView()
-               // AddDevicesView()
                // LoginView()
             } else if signInWithAppleMager.isUserAuthenticated == .signedOut {
                    LoginView()

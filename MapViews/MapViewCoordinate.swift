@@ -11,9 +11,9 @@ import MapKit
 
 class MapViewCoordinator: NSObject, MKMapViewDelegate {
    
-    var mapViewController: MapView
+    var mapViewController: MapViewSingleDevice
     
-    init(_ control: MapView) {
+    init(_ control: MapViewSingleDevice) {
         self.mapViewController = control
     }
 

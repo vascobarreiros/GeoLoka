@@ -21,7 +21,7 @@ struct DeviceListView: View {
     
     var filteredLokas: [Device] {
         getDevices_by_identifier.lokas_ids.filter { loka in
-            ( searchText.isEmpty ? true : loka.device_id.lowercased().contains(searchText.lowercased()) || searchText.isEmpty ? true : loka.device_name.lowercased().contains(searchText.lowercased()))
+            ( searchText.isEmpty ? true : (String(Int(loka.device_id , radix: 16)!)).lowercased().contains(searchText.lowercased()) || searchText.isEmpty ? true : loka.device_name.lowercased().contains(searchText.lowercased()))
         }
     }
     
@@ -40,9 +40,9 @@ struct DeviceListView: View {
                                 label: {
                                     HStack {
                                        // Text(loka.device_id)
-                                        Text(String(Int(loka.device_id , radix: 16)!))
-                                        Text("(\(loka.device_id))")
-                                        Text(loka.device_name)
+                                    Text(String(Int(loka.device_id , radix: 16)!)) + Text(" -")
+                                    //Text("(\(loka.device_id))").italic() +
+                                    Text(loka.device_name)
                                     }
                                 })
                             }

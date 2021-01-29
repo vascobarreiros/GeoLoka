@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -20,12 +22,16 @@ struct SettingsView: View {
                         Text(NSLocalizedString("Add a New Device",comment: ""))
                     }
                    }
-                NavigationLink(destination: Text("TBD")) {
+                    NavigationLink(destination: AddGeoFencingView()) {
                     HStack {
-                        Image(systemName: "clock.arrow.circlepath")
-                        Text(NSLocalizedString("Set time Interval",comment: ""))
+                        Image(systemName: "plus.circle.fill")
+                        Image(systemName: "mappin.and.ellipse")
+                        Text(NSLocalizedString("Add GeoFencing",comment: ""))
+                    }}
+                HStack {
+                        Image(systemName: "hand.raised.fill")
+                        Link("Privacy Policy", destination: URL(string: "https://martynet.pt/geoloka.html")!)
                     }
-                   }
                 }
                 .navigationTitle("Settings").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             }

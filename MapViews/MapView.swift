@@ -1,125 +1,106 @@
 //
-//  MapindLokasView.swift
-//  GeoLoka
+//  MapView.swift
+//  LongPress
 //
-//  Created by Vasco Barreiros on 21/12/2020.
+//  Created by Vasco Barreiros on 26/01/2021.
 //
 
 import SwiftUI
 import MapKit
 
-var allLocations1 = [MKPointAnnotation]()
-var locations_map: [CLLocationCoordinate2D] = []
-var destination:  [CLLocationCoordinate2D] = []
-var allLocations = [MKPointAnnotation]()
-
-
-class MyAnnotation: NSObject, MKAnnotation {
-    
-    var coordinate: CLLocationCoordinate2D
-    var title: String?
-    var subtitle: String?
-    init(coordinate: CLLocationCoordinate2D) {
-        
-        self.coordinate = coordinate
-    }
-    
-}
-
-
 struct MapView: UIViewRepresentable {
     
-  
-    var shared_single : GettingSingleMapData
-    var time : Int
-    var escolha : String
-    var raio: Double
+    @Binding var centerCoordinate: CLLocationCoordinate2D
+    var annotations: [MKPointAnnotation]
+    @Binding var selectedPlace: MKPointAnnotation?
+    @Binding var showingPlaceDetails: Bool
     
-    func makeCoordinator() -> MapViewCoordinator{
-            MapViewCoordinator(self)
-        }
     
-    func updateUIView(_ uiView: MKMapView, context: Context) {
-        
-        
-        
-        print("map started")
-        uiView.removeAnnotations(uiView.annotations)
-        uiView.removeOverlays(uiView.overlays)
-        locations_map = []
-        allLocations = []
-        destination = []
-        shared_single.doneGettingSingleMapData = true
-       // let time_now_24 = Int(NSDate().timeIntervalSince1970)-(time*60*60)
-        let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)")!
-        URLSession.shared.dataTask(with: url) {(data,response,error) in
-            do {
-                if let d = data {
-                do {
-                    let lokas : [loka_result] = try JSONDecoder().decode([loka_result].self, from: d)
-                    DispatchQueue.main.async {
-                     
-                        for locations in lokas {
-                            
-                            if locations.accuracy <= raio
-                            {
-                            var mapRegion = MKCoordinateRegion()
-                            let mapRegionSpan = 0.2
-                            mapRegion.span.latitudeDelta = mapRegionSpan
-                            mapRegion.span.longitudeDelta = mapRegionSpan
-                            if locations.temperature == nil {
-                                    temp = "N/A"
-                                }
-                            else {
-                                temp = String(locations.temperature!)
-                                }
-                            let destination = CLLocationCoordinate2D(latitude: locations.lat, longitude: locations.lng)
-                            mapRegion.center = destination
-                            locations_map.append(destination)
-                            uiView.setRegion(mapRegion, animated: true)
-                            let annotation = MKPointAnnotation()
-                            annotation.coordinate = CLLocationCoordinate2D(latitude: locations.lat, longitude: locations.lng)
-                           annotation.title = "Date= \(locations.date) - Time = \(locations.time)"
-                           let seq_numberString = String(locations.seqNumber)
-                                annotation.subtitle = "Message Seq = \(seq_numberString)\nAccuracy = \(locations.accuracy) m \nTemp =  \(temp ) ºC \nGeo =  \(locations.info)"
-                            allLocations.append(annotation)
-                            let circle = MKCircle(center: destination, radius: Double(locations.accuracy))
-                            uiView.addOverlay(circle)
-                         }
-                    }
-                    print("adding lokas to map")
-                    uiView.addAnnotations(allLocations as [MKAnnotation])
-                    let polyline = MKPolyline(coordinates: locations_map, count: locations_map.count )
-                    uiView.addOverlay(polyline,level: .aboveRoads)
-                    uiView.delegate = context.coordinator
-                    shared_single.doneGettingSingleMapData = false
-                    
-                    }
-                }
-            }else {
-                print("No Data")
-            }
-        } catch {
-            print("Erro", error)
-        }
-        
-    }.resume()
-     
-}
-
+    
     func makeUIView(context: Context) -> MKMapView {
-              MKMapView(frame: .zero)
-          }
+        let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        return mapView
+    }
+
+    func updateUIView(_ view: MKMapView, context: Context) {
+        if annotations.count != view.annotations.count {
+            view.removeAnnotations(view.annotations)
+            view.addAnnotations(annotations)
+        }
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
         
     }
 
+    class Coordinator: NSObject, MKMapViewDelegate {
+        
+        var parent: MapView
 
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+        
+        
+        //I want ContentView to have its centerCoordinate property updated as the map moves around
+        
+        func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+            parent.centerCoordinate = mapView.centerCoordinate
+        }
+        
+        
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            // this is our unique identifier for view reuse
+            let identifier = "Placemark"
 
-struct MapindLokasView_Previews: PreviewProvider {
-    
-    
+            // attempt to find a cell we can recycle
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+            if annotationView == nil {
+                // we didn't find one; make a new one
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+
+                // allow this to show pop up information
+                annotationView?.canShowCallout = true
+
+                // attach an information button to the view
+                annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            } else {
+                // we have a view to reuse, so give it the new annotation
+                annotationView?.annotation = annotation
+            }
+
+            // whether it's a new view or a recycled one, send it back
+            return annotationView
+        }
+        
+        func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            guard let placemark = view.annotation as? MKPointAnnotation else { return }
+
+            parent.selectedPlace = placemark
+            parent.showingPlaceDetails = true
+        }
+        
+        
+        
+    }
+}
+
+extension MKPointAnnotation {
+    static var example: MKPointAnnotation {
+        let annotation = MKPointAnnotation()
+        annotation.title = "London"
+        annotation.subtitle = "200"
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
+        return annotation
+    }
+}
+
+struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(shared_single: .init(), time:24, escolha:"7B07E7", raio: 10000)
+        MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate), annotations: [MKPointAnnotation.example], selectedPlace: .constant(MKPointAnnotation.example), showingPlaceDetails: .constant(false))
     }
 }
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC0B4C9D25AA192E0065732D /* MapAllLokasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */; };
 		BC339E7425AB045900D61849 /* MapViewCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7325AB045900D61849 /* MapViewCoordinate.swift */; };
-		BC339E7725AB04A000D61849 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7625AB04A000D61849 /* MapView.swift */; };
+		BC339E7725AB04A000D61849 /* MapViewSingleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7625AB04A000D61849 /* MapViewSingleDevice.swift */; };
 		BC339E7B25AB0C9900D61849 /* SingleDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */; };
 		BC339E7F25AB125B00D61849 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E7E25AB125B00D61849 /* BarView.swift */; };
 		BC339E8225AB197B00D61849 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC339E8125AB197B00D61849 /* BatteryView.swift */; };
@@ -29,7 +29,6 @@
 		BC517C2525A84A5C00BEF9F8 /* SignInWithAppleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2025A84A5C00BEF9F8 /* SignInWithAppleManager.swift */; };
 		BC517C2925A84D4600BEF9F8 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */; };
 		BC517C2F25A851A700BEF9F8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C2E25A851A700BEF9F8 /* LoginView.swift */; };
-		BC517C3225A8524000BEF9F8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3125A8524000BEF9F8 /* MainTabView.swift */; };
 		BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3525A8584400BEF9F8 /* SendUser.swift */; };
 		BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */; };
 		BC517C3F25A8C39E00BEF9F8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */; };
@@ -38,16 +37,45 @@
 		BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5225A8D38800BEF9F8 /* Spinner.swift */; };
 		BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5525A8D3DB00BEF9F8 /* Progress.swift */; };
 		BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */; };
+		BC7A19DB25BC3B4D00F74106 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A19DA25BC3B4D00F74106 /* MapView.swift */; };
+		BC92D59D25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */; };
+		BC92D5A025C1CA870024352D /* EditGeoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D59F25C1CA870024352D /* EditGeoLocationView.swift */; };
+		BC92D5A325C1CAE70024352D /* AddGeoFencingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5A225C1CAE70024352D /* AddGeoFencingView.swift */; };
+		BC92D5B225C321490024352D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5B125C321490024352D /* NotificationService.swift */; };
+		BC92D5B625C321490024352D /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BC92D5AF25C321490024352D /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CA25AD9757006453B9 /* SettingsView.swift */; };
-		BCA4E0CE25AD9B79006453B9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CD25AD9B79006453B9 /* Settings.swift */; };
 		BCB624F925B08DDD00A34B18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCB624FB25B08DDD00A34B18 /* Localizable.strings */; };
 		BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5604525AE170B0013AE17 /* AllDevicesView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BC92D5B425C321490024352D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC517C0025A84A0300BEF9F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC92D5AE25C321490024352D;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC92D5BA25C321490024352D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BC92D5B625C321490024352D /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAllLokasView.swift; sourceTree = "<group>"; };
 		BC339E7325AB045900D61849 /* MapViewCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinate.swift; sourceTree = "<group>"; };
-		BC339E7625AB04A000D61849 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BC339E7625AB04A000D61849 /* MapViewSingleDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewSingleDevice.swift; sourceTree = "<group>"; };
 		BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDeviceView.swift; sourceTree = "<group>"; };
 		BC339E7E25AB125B00D61849 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		BC339E8125AB197B00D61849 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
@@ -70,7 +98,6 @@
 		BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		BC517C2C25A850AD00BEF9F8 /* GeoLoka.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeoLoka.entitlements; sourceTree = "<group>"; };
 		BC517C2E25A851A700BEF9F8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		BC517C3125A8524000BEF9F8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		BC517C3525A8584400BEF9F8 /* SendUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendUser.swift; sourceTree = "<group>"; };
 		BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesModel.swift; sourceTree = "<group>"; };
 		BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -79,8 +106,14 @@
 		BC517C5225A8D38800BEF9F8 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		BC517C5525A8D3DB00BEF9F8 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
+		BC7A19DA25BC3B4D00F74106 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
+		BC92D59F25C1CA870024352D /* EditGeoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGeoLocationView.swift; sourceTree = "<group>"; };
+		BC92D5A225C1CAE70024352D /* AddGeoFencingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGeoFencingView.swift; sourceTree = "<group>"; };
+		BC92D5AF25C321490024352D /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC92D5B125C321490024352D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BC92D5B325C321490024352D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCA4E0CA25AD9757006453B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		BCA4E0CD25AD9B79006453B9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		BCB624FA25B08DDD00A34B18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BCB624FD25B08E0E00A34B18 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BCC5604525AE170B0013AE17 /* AllDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesView.swift; sourceTree = "<group>"; };
@@ -88,6 +121,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC517C0525A84A0400BEF9F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC92D5AC25C321490024352D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,7 +142,9 @@
 			children = (
 				BC0B4C9C25AA192E0065732D /* MapAllLokasView.swift */,
 				BC339E7325AB045900D61849 /* MapViewCoordinate.swift */,
-				BC339E7625AB04A000D61849 /* MapView.swift */,
+				BC339E7625AB04A000D61849 /* MapViewSingleDevice.swift */,
+				BC7A19DA25BC3B4D00F74106 /* MapView.swift */,
+				BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */,
 			);
 			path = MapViews;
 			sourceTree = "<group>";
@@ -129,6 +171,7 @@
 				BC517C2725A84D3600BEF9F8 /* Views */,
 				BC517C1B25A84A3700BEF9F8 /* SiginHelpers */,
 				BC517C0A25A84A0400BEF9F8 /* GeoLoka */,
+				BC92D5B025C321490024352D /* NotificationService */,
 				BC517C0925A84A0400BEF9F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BC517C0825A84A0400BEF9F8 /* GeoLoka.app */,
+				BC92D5AF25C321490024352D /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,7 +224,6 @@
 				BC517C2825A84D4600BEF9F8 /* LaunchScreenView.swift */,
 				BC339E9E25ABA71A00D61849 /* DeviceListView.swift */,
 				BC517C2E25A851A700BEF9F8 /* LoginView.swift */,
-				BC517C3125A8524000BEF9F8 /* MainTabView.swift */,
 				BC517C3E25A8C39E00BEF9F8 /* SwiftUIView.swift */,
 				BC517C4625A8CB8C00BEF9F8 /* AddDevicesView.swift */,
 				BC339E7A25AB0C9900D61849 /* SingleDeviceView.swift */,
@@ -188,6 +231,8 @@
 				BC339EA925AC5AAB00D61849 /* lokaListView.swift */,
 				BCA4E0CA25AD9757006453B9 /* SettingsView.swift */,
 				BCC5604525AE170B0013AE17 /* AllDevicesView.swift */,
+				BC92D59F25C1CA870024352D /* EditGeoLocationView.swift */,
+				BC92D5A225C1CAE70024352D /* AddGeoFencingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,7 +251,6 @@
 				BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */,
 				BC517C5525A8D3DB00BEF9F8 /* Progress.swift */,
 				BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */,
-				BCA4E0CD25AD9B79006453B9 /* Settings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +265,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BC92D5B025C321490024352D /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				BC92D5B125C321490024352D /* NotificationService.swift */,
+				BC92D5B325C321490024352D /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,15 +284,34 @@
 				BC517C0425A84A0400BEF9F8 /* Sources */,
 				BC517C0525A84A0400BEF9F8 /* Frameworks */,
 				BC517C0625A84A0400BEF9F8 /* Resources */,
+				BC92D5BA25C321490024352D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BC92D5B525C321490024352D /* PBXTargetDependency */,
 			);
 			name = GeoLoka;
 			productName = GeoLoka;
 			productReference = BC517C0825A84A0400BEF9F8 /* GeoLoka.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BC92D5AE25C321490024352D /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC92D5B725C321490024352D /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				BC92D5AB25C321490024352D /* Sources */,
+				BC92D5AC25C321490024352D /* Frameworks */,
+				BC92D5AD25C321490024352D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = BC92D5AF25C321490024352D /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -247,11 +319,14 @@
 		BC517C0025A84A0300BEF9F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					BC517C0725A84A0400BEF9F8 = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					BC92D5AE25C321490024352D = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -270,6 +345,7 @@
 			projectRoot = "";
 			targets = (
 				BC517C0725A84A0400BEF9F8 /* GeoLoka */,
+				BC92D5AE25C321490024352D /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +358,13 @@
 				BC517C1325A84A0800BEF9F8 /* Preview Assets.xcassets in Resources */,
 				BCB624F925B08DDD00A34B18 /* Localizable.strings in Resources */,
 				BC517C1025A84A0800BEF9F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC92D5AD25C321490024352D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,15 +382,17 @@
 				BC339E7B25AB0C9900D61849 /* SingleDeviceView.swift in Sources */,
 				BC517C0E25A84A0400BEF9F8 /* ContentView.swift in Sources */,
 				BC517C2325A84A5C00BEF9F8 /* AuthState.swift in Sources */,
+				BC92D5A325C1CAE70024352D /* AddGeoFencingView.swift in Sources */,
 				BC517C2F25A851A700BEF9F8 /* LoginView.swift in Sources */,
 				BC339E8E25AB5C5B00D61849 /* DeleteDeviceView.swift in Sources */,
-				BCA4E0CE25AD9B79006453B9 /* Settings.swift in Sources */,
+				BC92D59D25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift in Sources */,
+				BC7A19DB25BC3B4D00F74106 /* MapView.swift in Sources */,
 				BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */,
 				BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */,
 				BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */,
 				BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */,
 				BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */,
-				BC339E7725AB04A000D61849 /* MapView.swift in Sources */,
+				BC339E7725AB04A000D61849 /* MapViewSingleDevice.swift in Sources */,
 				BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */,
 				BC517C4325A8C4D100BEF9F8 /* SearchBar.swift in Sources */,
 				BC517C2525A84A5C00BEF9F8 /* SignInWithAppleManager.swift in Sources */,
@@ -320,14 +405,30 @@
 				BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */,
 				BC339EAA25AC5AAB00D61849 /* lokaListView.swift in Sources */,
 				BC517C2425A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift in Sources */,
+				BC92D5A025C1CA870024352D /* EditGeoLocationView.swift in Sources */,
 				BC0B4C9D25AA192E0065732D /* MapAllLokasView.swift in Sources */,
 				BC339E8925AB3C2100D61849 /* TempChartView.swift in Sources */,
 				BC517C2925A84D4600BEF9F8 /* LaunchScreenView.swift in Sources */,
-				BC517C3225A8524000BEF9F8 /* MainTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC92D5AB25C321490024352D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC92D5B225C321490024352D /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC92D5B525C321490024352D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC92D5AE25C321490024352D /* NotificationService */;
+			targetProxy = BC92D5B425C321490024352D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BCB624FB25B08DDD00A34B18 /* Localizable.strings */ = {
@@ -346,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -407,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -461,11 +564,12 @@
 		BC517C1825A84A0800BEF9F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -486,11 +590,12 @@
 		BC517C1925A84A0800BEF9F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -503,6 +608,50 @@
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vasco-barreiros.io.GeoLoka";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC92D5B825C321490024352D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vasco-barreiros.io.GeoLoka.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC92D5B925C321490024352D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vasco-barreiros.io.GeoLoka.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,6 +674,15 @@
 			buildConfigurations = (
 				BC517C1825A84A0800BEF9F8 /* Debug */,
 				BC517C1925A84A0800BEF9F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC92D5B725C321490024352D /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC92D5B825C321490024352D /* Debug */,
+				BC92D5B925C321490024352D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

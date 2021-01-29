@@ -18,18 +18,23 @@ struct LoginView: View {
     
     var body: some View {
         
-        VStack {
-            SignInWithAppleButton()
-                .frame(width: 280, height: 60)
-                .padding()
-                .onTapGesture {
-                    self.showAppleLogin()
-            }.alert(isPresented: $isAlertPresented) {
-                Alert(title: Text("Error"), message: Text(errDescription), dismissButton: .default(Text("Ok"), action: {
-                    // set isUserAuthenticated to signed out
-                    self.signInWithAppleMager.isUserAuthenticated = .signedOut
-                }))
-        }
+    
+        ZStack {
+            Color.gray.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack {
+                    SignInWithAppleButton()
+                        .frame(width: 280, height: 60)
+                        .padding()
+                        .onTapGesture {
+                            self.showAppleLogin()
+                    }.alert(isPresented: $isAlertPresented) {
+                        Alert(title: Text("Error"), message: Text(errDescription), dismissButton: .default(Text("Ok"), action: {
+                            // set isUserAuthenticated to signed out
+                            self.signInWithAppleMager.isUserAuthenticated = .signedOut
+                        }))
+                }
+                
+            }
         }
     }
     

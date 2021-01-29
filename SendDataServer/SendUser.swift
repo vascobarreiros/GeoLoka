@@ -17,9 +17,9 @@ var request = URLRequest(url: url)
 request.httpMethod = "POST"
     var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord
     dataString = dataString + "&identifier=\(identifier)"
-    dataString = dataString + "name=\(name)"
-    dataString = dataString + "familyname=\(familyname)"
-    dataString = dataString + "email=\(email)"
+    dataString = dataString + "&name=\(name)"
+    dataString = dataString + "&familyname=\(familyname)"
+    dataString = dataString + "&email=\(email)"
     let dataD = dataString.data(using: .utf8) // convert to utf8 string
     do
     {

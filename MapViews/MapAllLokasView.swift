@@ -13,7 +13,7 @@ var temperatura = [Double]()
 
 struct MapallLokasView: UIViewRepresentable {
     
-    var time = 24
+    var time = 6
     var shared_all : GettingAllMapData
     var identifier : String
     var delta_hours : Int
@@ -47,18 +47,20 @@ struct MapallLokasView: UIViewRepresentable {
                                         temperatura.append(locations.temperature!)
                                         temp = String(locations.temperature!)
                                         }
+                                    
                                     let annotation2 = MKPointAnnotation()
                                         annotation2.coordinate = CLLocationCoordinate2D(latitude: locations.lat, longitude: locations.lng)
-                                        annotation2.title = "Device = \(locations.device) \(locations.date)"
+                                    annotation2.title = "Device = \(String(Int(locations.device , radix: 16)!)) \(locations.date)\n\(locations.time)"
                                        let seq_numberString = temp
                                         annotation2.subtitle = "Temp = \(seq_numberString)ºC"
                                         
-                                        allLocations2.append(annotation2)
+                                    allLocations2.append(annotation2)
                                         
                                         
                                     }
                                 
                             }
+                            
                             self.shared_all.doneGettingAllMapData = false
                             uiView2.addAnnotations(allLocations2)
                             uiView2.showAnnotations(uiView2.annotations, animated: true)
@@ -91,6 +93,6 @@ struct MapallLokasView: UIViewRepresentable {
 
 struct MapallLokasView_Previews: PreviewProvider {
     static var previews: some View {
-        MapallLokasView(shared_all: .init(), identifier:"000156.42f100f369164279a37b77c63f2dab3f.1008",delta_hours:48, raio: 100.0)
+        MapallLokasView(shared_all: .init(), identifier:"000156.42f100f369164279a37b77c63f2dab3f.1008",delta_hours:6, raio: 100.0)
     }
 }

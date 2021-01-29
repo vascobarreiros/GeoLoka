@@ -41,6 +41,10 @@ class DeviceRemoved : ObservableObject {
         
     }
 
-
+class Token : ObservableObject {
+    
+    @Published var token = ""
+    
+}
 
 

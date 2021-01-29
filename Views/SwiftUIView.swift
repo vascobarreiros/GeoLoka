@@ -39,8 +39,8 @@ struct CheckNetworkView: View {
         )
         .alert(isPresented: $internet) {
                     Alert(
-                        title: Text("Check Internet connection"),
-                        message: Text("Do you want to dismiss the view?")
+                        title: Text(NSLocalizedString("Check Internet connection",comment: "")),
+                        message: Text(NSLocalizedString("Do you want to dismiss the view?",comment: ""))
                     )
                 }
     

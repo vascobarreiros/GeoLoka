@@ -15,9 +15,10 @@ struct DeleteDeviceView: View {
     @ObservedObject var getDevices_by_identifier = GetDevices_by_identifier()
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
     
+    
     var body: some View {
         VStack{
-            Text("Delete Device = \(escolha)")
+            Text("Delete Device = \(String(Int(escolha , radix: 16)!))")
                 .font(.title2)
             Button(action: {
                 print("I'm going to delete the Device")
@@ -34,7 +35,7 @@ struct DeleteDeviceView: View {
                          .background(Color.red)
                          .cornerRadius(40)
                 }).alert(isPresented: $showconfirmation) {
-                    Alert(title: Text(NSLocalizedString("Device Deleted",comment: "")), message: Text("Device \(escolha) was deleted"), dismissButton: .default(Text("Ok")))
+                    Alert(title: Text(NSLocalizedString("Device Deleted",comment: "")), message: Text("Device \((String(Int(escolha , radix: 16)!))) was deleted"), dismissButton: .default(Text("Ok")))
                     
                 }
         }

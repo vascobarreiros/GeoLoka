@@ -12,7 +12,7 @@ struct SingleDeviceView: View {
     @ObservedObject var done_Single_map = GettingSingleMapData()
     @State var selection = 1
     @State var escolha : String
-    
+    @State var hours: Int = 24
     @State private var selectorIndex = 1
     @State private var accuracy = ["All","0-100","100-500","500-1000"," > 1000"]
     @State private var accuracyNumber = [1000000.0,100.0,500.0,1000.0]
@@ -30,7 +30,21 @@ struct SingleDeviceView: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    MapView(shared_single: done_Single_map,time:24, escolha: escolha, raio: accuracyNumber[selectorIndex])
+                    MapViewSingleDevice(shared_single: done_Single_map,time:hours, escolha: escolha, raio: accuracyNumber[selectorIndex]).ignoresSafeArea()
+                    HStack {
+                        Text("Last")
+                        Picker("", selection: $hours){
+                                            ForEach(1..<72, id: \.self) { i in
+                                                Text("\(i) hours")
+                                            }
+                                        }.pickerStyle(WheelPickerStyle())
+                                        .clipped()
+                                        .scaledToFit()
+                                        .font(.caption)
+                                        .frame(width:300.0, height: 90.0)
+                    }
+                                    
+
                 }
                 Spinner(isAnimating: done_Single_map.doneGettingSingleMapData, style: .large, color: .green)
             }.tabItem {
