@@ -28,6 +28,12 @@ struct SettingsView: View {
                         Image(systemName: "mappin.and.ellipse")
                         Text(NSLocalizedString("Add GeoFencing",comment: ""))
                     }}
+                    NavigationLink(destination: MapViewGeoFencing()) {
+                    HStack {
+                        Image(systemName: "eye.circle")
+                        Image(systemName: "mappin.and.ellipse")
+                        Text(NSLocalizedString("View GeoFencing",comment: ""))
+                    }}
                 HStack {
                         Image(systemName: "hand.raised.fill")
                         Link("Privacy Policy", destination: URL(string: "https://martynet.pt/geoloka.html")!)

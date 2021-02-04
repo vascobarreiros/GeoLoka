@@ -47,4 +47,8 @@ class Token : ObservableObject {
     
 }
 
+class GettingGeoFencingMap: ObservableObject {
 
+@Published var doneGettingGeoFencingMap = false
+    
+}

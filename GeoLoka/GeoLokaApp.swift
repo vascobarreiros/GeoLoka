@@ -61,7 +61,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
          let token = tokenParts.joined()
          // 2. Print device token to use for PNs payloads
          print("Device Token: \(token)")
-        AppDelegate.geolokaToken = token
+         AppDelegate.geolokaToken = token
          
         // This needs to be uploaded to the server - because then it will be need it to send the push messages - each device has its unique token
      }
@@ -70,6 +70,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
          // 1. Print out error if PNs registration not successful
          print("Failed to register for remote notifications with error: \(error)")
      }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
+    }
     
     
 }

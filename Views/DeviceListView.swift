@@ -81,6 +81,7 @@ struct DeviceListView: View {
         .onAppear {
                getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
                 getDevices_by_identifier.fetchdevices()
+                UIApplication.shared.applicationIconBadgeNumber = 0
             }
         .onDisappear {
                getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!

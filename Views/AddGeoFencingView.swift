@@ -18,6 +18,8 @@ struct AddGeoFencingView: View {
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
     @EnvironmentObject var signInWithAppleMager: SignInWithAppleManager
+    var destination:  [CLLocationCoordinate2D] = []
+    var locations_map: [CLLocationCoordinate2D] = []
     
     var body: some View {
         ZStack {
@@ -68,8 +70,8 @@ struct AddGeoFencingView: View {
         .onAppear(perform: loadData)
     }
     
-    func loadData() {
-     // get data from the server TBD
+func loadData() {
+     // get data from the server and add them to locations
         
     }
     

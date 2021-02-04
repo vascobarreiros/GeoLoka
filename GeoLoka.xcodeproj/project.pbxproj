@@ -43,6 +43,9 @@
 		BC92D5A325C1CAE70024352D /* AddGeoFencingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5A225C1CAE70024352D /* AddGeoFencingView.swift */; };
 		BC92D5B225C321490024352D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5B125C321490024352D /* NotificationService.swift */; };
 		BC92D5B625C321490024352D /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BC92D5AF25C321490024352D /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BC92D5D025C59D8F0024352D /* GeoFencingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5CF25C59D8F0024352D /* GeoFencingModel.swift */; };
+		BC92D5D725C5B8200024352D /* MapViewGeoFencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5D625C5B8200024352D /* MapViewGeoFencing.swift */; };
+		BC92D5DB25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5DA25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift */; };
 		BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CA25AD9757006453B9 /* SettingsView.swift */; };
 		BCB624F925B08DDD00A34B18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCB624FB25B08DDD00A34B18 /* Localizable.strings */; };
 		BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5604525AE170B0013AE17 /* AllDevicesView.swift */; };
@@ -113,6 +116,10 @@
 		BC92D5AF25C321490024352D /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC92D5B125C321490024352D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		BC92D5B325C321490024352D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC92D5CF25C59D8F0024352D /* GeoFencingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoFencingModel.swift; sourceTree = "<group>"; };
+		BC92D5D325C5A8650024352D /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BC92D5D625C5B8200024352D /* MapViewGeoFencing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewGeoFencing.swift; sourceTree = "<group>"; };
+		BC92D5DA25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinateGeoFencing.swift; sourceTree = "<group>"; };
 		BCA4E0CA25AD9757006453B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BCB624FA25B08DDD00A34B18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BCB624FD25B08E0E00A34B18 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -145,6 +152,8 @@
 				BC339E7625AB04A000D61849 /* MapViewSingleDevice.swift */,
 				BC7A19DA25BC3B4D00F74106 /* MapView.swift */,
 				BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */,
+				BC92D5D625C5B8200024352D /* MapViewGeoFencing.swift */,
+				BC92D5DA25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift */,
 			);
 			path = MapViews;
 			sourceTree = "<group>";
@@ -251,6 +260,7 @@
 				BC517C3A25A8A90A00BEF9F8 /* DevicesModel.swift */,
 				BC517C5525A8D3DB00BEF9F8 /* Progress.swift */,
 				BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */,
+				BC92D5CF25C59D8F0024352D /* GeoFencingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +348,7 @@
 				en,
 				Base,
 				da,
+				"pt-PT",
 			);
 			mainGroup = BC517BFF25A84A0300BEF9F8;
 			productRefGroup = BC517C0925A84A0400BEF9F8 /* Products */;
@@ -375,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC92D5D725C5B8200024352D /* MapViewGeoFencing.swift in Sources */,
 				BC517C3F25A8C39E00BEF9F8 /* SwiftUIView.swift in Sources */,
 				BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */,
 				BC517C2225A84A5C00BEF9F8 /* SignInWithAppleButton.swift in Sources */,
@@ -390,6 +402,7 @@
 				BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */,
 				BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */,
 				BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */,
+				BC92D5DB25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift in Sources */,
 				BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */,
 				BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */,
 				BC339E7725AB04A000D61849 /* MapViewSingleDevice.swift in Sources */,
@@ -402,6 +415,7 @@
 				BC339E9F25ABA71A00D61849 /* DeviceListView.swift in Sources */,
 				BC517C2125A84A5C00BEF9F8 /* EnvironmentWindowKey.swift in Sources */,
 				BC517C4725A8CB8C00BEF9F8 /* AddDevicesView.swift in Sources */,
+				BC92D5D025C59D8F0024352D /* GeoFencingModel.swift in Sources */,
 				BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */,
 				BC339EAA25AC5AAB00D61849 /* lokaListView.swift in Sources */,
 				BC517C2425A84A5C00BEF9F8 /* SignInWithAppleDelegates.swift in Sources */,
@@ -436,6 +450,7 @@
 			children = (
 				BCB624FA25B08DDD00A34B18 /* en */,
 				BCB624FD25B08E0E00A34B18 /* da */,
+				BC92D5D325C5A8650024352D /* pt-PT */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -569,7 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -595,7 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -617,7 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -639,7 +654,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
