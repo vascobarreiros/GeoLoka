@@ -12,7 +12,7 @@ import UIKit
 
 func loadUserToServer(identifier:String,name:String,familyname:String,email:String) {
 
-let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/put_identifier.php")!
+let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/put_identifier.php")!
 var request = URLRequest(url: url)
 request.httpMethod = "POST"
     var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord

@@ -20,7 +20,7 @@ struct loka_result: Codable {
     var accuracy: Double
     var info: String
     var temperature : Double?
-    var battery_voltage : Float?
+    var battery : Float?
 }
 
 
@@ -40,7 +40,7 @@ class GetAllDevicesDetails: ObservableObject {
    
     
     init() {
-        let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations_new.php?identifier=\(self.identifier)&hours=\(self.delta_hours)")!
+        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_new.php?identifier=\(self.identifier)&hours=\(self.delta_hours)")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
              do {
                  if let d = data {
@@ -69,7 +69,7 @@ class SpecificDeviceDetails: ObservableObject {
    
     
     init() {
-        let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations_with_double_entry.php?device=device\(self.device)&hours=\(self.delta_hours)")!
+        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_with_double_entry.php?device=device\(self.device)&hours=\(self.delta_hours)")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
              do {
                  if let d = data {
@@ -95,7 +95,7 @@ class FetchAllLoka_Data: ObservableObject {
     @Published var donefetchingData = true
 
     init() {
-        let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations.php")!
+        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations.php")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
              do {
                  if let d = data {

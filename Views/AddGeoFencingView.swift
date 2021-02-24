@@ -86,7 +86,7 @@ func loadData() {
         print("User = \(UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)")
         print("Device Token: \(AppDelegate.geolokaToken)")
        // print("This is the device Token = \(toke)")
-        let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/put_geofencing.php")!
+        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/put_geofencing.php")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord

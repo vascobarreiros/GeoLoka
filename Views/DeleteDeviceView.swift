@@ -43,7 +43,7 @@ struct DeleteDeviceView: View {
     
     func deleteDevicefromServer(device_id:String) {
 
-    let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/delete_device.php")!
+    let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/delete_device.php")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
         var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord

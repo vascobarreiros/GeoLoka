@@ -31,33 +31,9 @@ struct BatteryView: View {
             load_Specific_Loka_Data(escolha: device,time: 24) { vb in
                 
                 for j in vb {
-                    if j.battery_voltage != nil {
+                    if j.battery != nil {
                         
-                        switch  j.battery_voltage! {
-                        
-                        case  3.0...5.0 :
-                            
-                            battery_perc = 100/100
-                        
-                        case 2.9...3.0 :
-                        
-                            battery_perc = (Float(100 - ((3.0 - j.battery_voltage!)*58) / 100))/100
-                        
-                        case 2.740...2.9 :
-                        
-                            battery_perc = (Float(42 - ((2.9 - j.battery_voltage!)*24) / 160))/100
-                            
-                        case 2.440...2.740 :
-                        
-                            battery_perc = (Float(18 - ((2.740 - j.battery_voltage!)*12) / 300))/100
-                         
-                        case 2.110...2.440 :
-                        
-                            battery_perc = (Float(6 - ((2.440 - j.battery_voltage!)*6) / 340))/100
-                            
-                        default:
-                            battery_perc = 0
-                        }
+                        battery_perc = (j.battery!)/100
                         
                     }
                     
@@ -72,7 +48,7 @@ struct BatteryView: View {
     {
         
         guard
-                let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)"),
+                let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)"),
                 let data = try? Data(contentsOf: url)
                 else { return }
         

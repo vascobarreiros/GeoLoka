@@ -25,7 +25,7 @@ struct MapallLokasView: UIViewRepresentable {
         uiView2.removeAnnotations(allLocations2)
         allLocations2 = []
       shared_all.doneGettingAllMapData = true
-      let url = URL(string: "https://lokagetlocations-uyiltasaia-ew.a.run.app/get_locations_new.php?identifier=\(self.identifier)&hours=\(self.delta_hours)")!
+      let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_new.php?identifier=\(self.identifier)&hours=\(self.delta_hours)")!
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {
                 if let d = data {

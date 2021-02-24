@@ -70,6 +70,15 @@ struct SingleDeviceView: View {
                 Text(NSLocalizedString("Remove Device",comment: ""))
                 }.tag(3)
             
+            VStack {
+                DeviceDetailsView(escolha: escolha)
+            }.tabItem {
+                Image(systemName: "person.crop.square.fill.and.at.rectangle")
+                Text(NSLocalizedString("Device Details",comment: ""))
+                }.tag(4)
+            
+            
+            
             
         }
     }
