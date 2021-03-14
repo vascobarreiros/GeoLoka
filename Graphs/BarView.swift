@@ -18,7 +18,7 @@ struct BarView: View{
         VStack {
 
             ZStack (alignment: .bottom) {
-                Text(String(xvalue).dropLast(3))
+                Text(String(xvalue))
                     .foregroundColor(Color.white)
                     .offset(x:-55)
                     .zIndex(2)

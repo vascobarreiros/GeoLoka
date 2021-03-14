@@ -98,7 +98,9 @@ struct DeviceListView: View {
             getDevices_by_identifier.donefetchingData = true
             getDevices_by_identifier.identifier = UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!
              getDevices_by_identifier.fetchdevices()
+            UIApplication.shared.applicationIconBadgeNumber = 0
                     }
+        
         
     }
     

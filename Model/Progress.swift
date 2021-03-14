@@ -52,3 +52,9 @@ class GettingGeoFencingMap: ObservableObject {
 @Published var doneGettingGeoFencingMap = false
     
 }
+
+class GettingTemp : ObservableObject {
+   
+    @Published var doneGettingTemp = false
+    
+}

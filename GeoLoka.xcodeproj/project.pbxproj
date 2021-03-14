@@ -39,6 +39,8 @@
 		BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5225A8D38800BEF9F8 /* Spinner.swift */; };
 		BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5525A8D3DB00BEF9F8 /* Progress.swift */; };
 		BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */; };
+		BC6969EB25E6E7A5000531D7 /* BatteryView_new.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6969EA25E6E7A5000531D7 /* BatteryView_new.swift */; };
+		BC6969EF25E6EB3A000531D7 /* BatteryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6969EE25E6EB3A000531D7 /* BatteryDetails.swift */; };
 		BC7A19DB25BC3B4D00F74106 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A19DA25BC3B4D00F74106 /* MapView.swift */; };
 		BC92D59D25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */; };
 		BC92D5A025C1CA870024352D /* EditGeoLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D59F25C1CA870024352D /* EditGeoLocationView.swift */; };
@@ -50,6 +52,8 @@
 		BC92D5DB25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92D5DA25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift */; };
 		BCA4E0CB25AD9757006453B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA4E0CA25AD9757006453B9 /* SettingsView.swift */; };
 		BCB624F925B08DDD00A34B18 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCB624FB25B08DDD00A34B18 /* Localizable.strings */; };
+		BCB6DC9C25E7AB1D00005F59 /* TempDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6DC9B25E7AB1D00005F59 /* TempDetails.swift */; };
+		BCB6DCA025E7ABD600005F59 /* TempChartViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6DC9F25E7ABD600005F59 /* TempChartViewNew.swift */; };
 		BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC5604525AE170B0013AE17 /* AllDevicesView.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +117,8 @@
 		BC517C5225A8D38800BEF9F8 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		BC517C5525A8D3DB00BEF9F8 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetails.swift; sourceTree = "<group>"; };
+		BC6969EA25E6E7A5000531D7 /* BatteryView_new.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView_new.swift; sourceTree = "<group>"; };
+		BC6969EE25E6EB3A000531D7 /* BatteryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryDetails.swift; sourceTree = "<group>"; };
 		BC7A19DA25BC3B4D00F74106 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BC92D59C25C1CA5C0024352D /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		BC92D59F25C1CA870024352D /* EditGeoLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGeoLocationView.swift; sourceTree = "<group>"; };
@@ -127,6 +133,8 @@
 		BCA4E0CA25AD9757006453B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BCB624FA25B08DDD00A34B18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BCB624FD25B08E0E00A34B18 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCB6DC9B25E7AB1D00005F59 /* TempDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDetails.swift; sourceTree = "<group>"; };
+		BCB6DC9F25E7ABD600005F59 /* TempChartViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChartViewNew.swift; sourceTree = "<group>"; };
 		BCC5604525AE170B0013AE17 /* AllDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDevicesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +176,8 @@
 				BC339E7E25AB125B00D61849 /* BarView.swift */,
 				BC339E8125AB197B00D61849 /* BatteryView.swift */,
 				BC339E8825AB3C2100D61849 /* TempChartView.swift */,
+				BC6969EA25E6E7A5000531D7 /* BatteryView_new.swift */,
+				BCB6DC9F25E7ABD600005F59 /* TempChartViewNew.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -267,6 +277,8 @@
 				BC517C5825A8F10F00BEF9F8 /* DevicesDetails.swift */,
 				BC92D5CF25C59D8F0024352D /* GeoFencingModel.swift */,
 				BC2662EB25E59CB6008C6355 /* DetailsModel.swift */,
+				BC6969EE25E6EB3A000531D7 /* BatteryDetails.swift */,
+				BCB6DC9B25E7AB1D00005F59 /* TempDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,11 +406,13 @@
 			files = (
 				BC2662EC25E59CB6008C6355 /* DetailsModel.swift in Sources */,
 				BC92D5D725C5B8200024352D /* MapViewGeoFencing.swift in Sources */,
+				BC6969EF25E6EB3A000531D7 /* BatteryDetails.swift in Sources */,
 				BC517C3F25A8C39E00BEF9F8 /* SwiftUIView.swift in Sources */,
 				BC517C5925A8F10F00BEF9F8 /* DevicesDetails.swift in Sources */,
 				BC517C2225A84A5C00BEF9F8 /* SignInWithAppleButton.swift in Sources */,
 				BC339E7425AB045900D61849 /* MapViewCoordinate.swift in Sources */,
 				BC339E7B25AB0C9900D61849 /* SingleDeviceView.swift in Sources */,
+				BC6969EB25E6E7A5000531D7 /* BatteryView_new.swift in Sources */,
 				BC517C0E25A84A0400BEF9F8 /* ContentView.swift in Sources */,
 				BC2662F025E59EB5008C6355 /* DeviceDetailsView.swift in Sources */,
 				BC517C2325A84A5C00BEF9F8 /* AuthState.swift in Sources */,
@@ -410,6 +424,7 @@
 				BC517C3625A8584400BEF9F8 /* SendUser.swift in Sources */,
 				BC517C5625A8D3DB00BEF9F8 /* Progress.swift in Sources */,
 				BC517C5325A8D38800BEF9F8 /* Spinner.swift in Sources */,
+				BCB6DC9C25E7AB1D00005F59 /* TempDetails.swift in Sources */,
 				BC92D5DB25C5BC3A0024352D /* MapViewCoordinateGeoFencing.swift in Sources */,
 				BCC5604625AE170B0013AE17 /* AllDevicesView.swift in Sources */,
 				BC339EA725AC58F800D61849 /* PullToRefresh.swift in Sources */,
@@ -417,6 +432,7 @@
 				BC517C3B25A8A90B00BEF9F8 /* DevicesModel.swift in Sources */,
 				BC517C4325A8C4D100BEF9F8 /* SearchBar.swift in Sources */,
 				BC517C2525A84A5C00BEF9F8 /* SignInWithAppleManager.swift in Sources */,
+				BCB6DCA025E7ABD600005F59 /* TempChartViewNew.swift in Sources */,
 				BC517C0C25A84A0400BEF9F8 /* GeoLokaApp.swift in Sources */,
 				BC339E8225AB197B00D61849 /* BatteryView.swift in Sources */,
 				BC339E7F25AB125B00D61849 /* BarView.swift in Sources */,
@@ -592,7 +608,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -618,7 +634,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GeoLoka/GeoLoka.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"GeoLoka/Preview Content\"";
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				ENABLE_PREVIEWS = YES;
@@ -640,7 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -662,7 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 55Z4AUXQ4N;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;

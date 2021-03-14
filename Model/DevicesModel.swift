@@ -28,7 +28,7 @@ class GetDevices: ObservableObject {
    
     
     init() {
-        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_devices.php")!
+        let url = URL(string: "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_devices.php")!
         URLSession.shared.dataTask(with: url) {(data, response, error) in
              do {
                  if let d = data {
@@ -62,7 +62,7 @@ class GetDevices_by_identifier: ObservableObject {
     }
    
     func fetchdevices() {
-        let urlString = "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_devices_identifier.php?identifier=\(identifier)"
+        let urlString = "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_devices_identifier.php?identifier=\(identifier)"
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
@@ -112,7 +112,7 @@ class GetUniqueDevices: ObservableObject {
     }
    
     func fetchdevice() {
-        let urlString = "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_devices_unique.php?device=\(device)"
+        let urlString = "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_devices_unique.php?device=\(device)"
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in

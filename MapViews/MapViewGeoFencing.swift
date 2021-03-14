@@ -27,7 +27,7 @@ struct MapViewGeoFencing: UIViewRepresentable {
         allLocations = []
         destination = []
      //   shared_Geo.doneGettingGeoFencingMap = true
-        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_geofencing.php?identifier=\((UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!))")!
+        let url = URL(string: "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_geofencing.php?identifier=\((UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!))")!
                URLSession.shared.dataTask(with: url)
                {(data,response,error) in
                    do {

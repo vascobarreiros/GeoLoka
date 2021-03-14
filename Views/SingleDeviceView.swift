@@ -56,7 +56,7 @@ struct SingleDeviceView: View {
                     Color(.black).edgesIgnoringSafeArea(.all)
                     VStack {
                         BatteryView(device: escolha).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                        TempChartView(device: escolha, temperature_intervale: 12)
+                        TempChartViewNew(escolha: escolha)
                     }
                 }
             }.tabItem {

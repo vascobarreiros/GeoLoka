@@ -4,14 +4,13 @@
 //
 //  Created by Vasco Barreiros on 10/01/2021.
 //
-
 import SwiftUI
 
 struct BatteryView: View {
     
     @State var progressValue: Float = 0.2
     @State var device : String
-    @State var results = [loka_result]()
+    @State var results = [battery_result]()
     @State var battery_perc : Float = 100.0
     
     var body: some View {
@@ -31,11 +30,11 @@ struct BatteryView: View {
             load_Specific_Loka_Data(escolha: device,time: 24) { vb in
                 
                 for j in vb {
-                    if j.battery != nil {
+                
                         
-                        battery_perc = (j.battery!)/100
+                    battery_perc = Float((j.battery)/100)
                         
-                    }
+                    
                     
                     
                 }
@@ -43,16 +42,16 @@ struct BatteryView: View {
         })
     }
     
-    func load_Specific_Loka_Data(escolha:String, time:Int, completion: ([loka_result]) -> ())
+    func load_Specific_Loka_Data(escolha:String, time:Int, completion: ([battery_result]) -> ())
 
     {
         
         guard
-                let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)"),
+                let url = URL(string: "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_battery.php?device=\(escolha)&hours=\(time)"),
                 let data = try? Data(contentsOf: url)
                 else { return }
         
-        let json_loka = try? JSONDecoder().decode([loka_result].self, from: data)
+        let json_loka = try? JSONDecoder().decode([battery_result].self, from: data)
         guard let loka_data = json_loka else { return }
         completion(loka_data)
     }
@@ -89,6 +88,6 @@ struct BatteryView_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        BatteryView(device: "7B07E7")
+        BatteryView(device: "3805B2")
     }
 }

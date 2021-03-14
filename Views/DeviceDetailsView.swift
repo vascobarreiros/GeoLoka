@@ -70,7 +70,7 @@ extension DeviceDetailsView
 {
     func loadData() {
         
-        guard let url = URL(string:  "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_devices_details.php?device=\(escolha)")
+        guard let url = URL(string:  "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_devices_details.php?device=\(escolha)")
         else {
             return
         }

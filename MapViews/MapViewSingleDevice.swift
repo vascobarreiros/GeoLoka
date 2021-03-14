@@ -51,7 +51,7 @@ func updateUIView(_ uiView: MKMapView, context: Context) {
         destination = []
         shared_single.doneGettingSingleMapData = true
        // let time_now_24 = Int(NSDate().timeIntervalSince1970)-(time*60*60)
-        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)")!
+        let url = URL(string: "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_locations_with_double_entry.php?device=\(escolha)&hours=\(time)")!
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {
                 if let d = data {

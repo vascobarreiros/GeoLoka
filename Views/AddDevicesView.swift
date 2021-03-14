@@ -89,7 +89,7 @@ struct AddDevicesView: View {
                             print ("Device ID in Hex = \(device_id)")
                             // Before anything we need to check if its not duplicated if not duplicated then we can procede
                             // TBD
-                            let urlString2 = "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_device_by_deviceid.php?identifier=\(UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)&device_id=\(device_id)"
+                            let urlString2 = "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_device_by_deviceid.php?identifier=\(UserDefaults.standard.string(forKey: signInWithAppleMager.userIdentifierKey)!)&device_id=\(device_id)"
                             if let url = URL(string: urlString2){
                             let session2 = URLSession(configuration: .default)
                             let task2 = session2.dataTask(with: url) { (data, response, error) in
@@ -107,7 +107,7 @@ struct AddDevicesView: View {
                                                         }
                                                     else {
                                                         //Now Checking if the device exists in the global list of devices if it does it will be added.
-                                                        let urlString = "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/get_devices_unique.php?device=\(device_id)"
+                                                        let urlString = "https://lokaiosapp-cnkwoooqra-ew.a.run.app/get_devices_unique.php?device=\(device_id)"
                                                         if let url = URL(string: urlString){
                                                             let session = URLSession(configuration: .default)
                                                             let task = session.dataTask(with: url) { (data, response, error) in
@@ -202,7 +202,7 @@ struct AddDevicesView: View {
     
     func loadDeviceToServer(device_id:String, device_name: String, identifier:String) {
         
-        let url = URL(string: "https://lokaiosapp-k4sm7ymkwq-ew.a.run.app/put_device.php")!
+        let url = URL(string: "https://lokaiosapp-cnkwoooqra-ew.a.run.app/put_device.php")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         var dataString = "secret=44fdcv8jf3" // starting POST string with a secretWord
